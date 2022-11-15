@@ -30,7 +30,7 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue, sliderActive, 
             />
             <Column
                 element={'Chart'}
-                content={'Information2'}
+                content={'Oil Data'}
                 numberOfTiles={1}
                 hasChart={'Yes'}
                 hasWideRow={'Yes'}

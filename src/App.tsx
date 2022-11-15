@@ -5,6 +5,7 @@ import Ticker from './Components/Ticker/Ticker';
 import TileTemplate from './Components/TileTemplate/TileTemplate';
 import NewsColumns from './Components/News/NewsColumns';
 import ComponentBar from './Components/ComponentBar/ComponentBar';
+import EconomicData from './Components/EconomicData/EconomicData';
 
 const App: React.FC = () => {
   const [news, setNews] = useState<any[]>([])
@@ -18,6 +19,8 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+
+      <EconomicData />
 
       <Nav
         isActive={isActive}

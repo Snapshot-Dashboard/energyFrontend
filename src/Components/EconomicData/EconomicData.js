@@ -1,39 +1,36 @@
-import React, { useState, useEffect } from 'react'
-import axios from "axios";
+import React, { useState } from 'react'
+import Axios from 'axios'
+import { useEffect } from 'react'
 
 function EconomicData() {
-    const [apiData, setApiData] = useState('')
+    const [data, setData] = useState([])
 
-    // const options = {
-    //     method: 'GET',
-    //     url: 'https://u-s-economic-indicators.p.rapidapi.com/api/v1/resources/mortgage-rate-30Y-fixed-monthly',
-    //     headers: {
-    //         'X-RapidAPI-Key': '2a5ae053bdmsh289fd6e9e075512p1bb69djsn1890178e4707',
-    //         'X-RapidAPI-Host': 'u-s-economic-indicators.p.rapidapi.com'
-    //     }
-    // };
+    // api v2 U.S. Ending Stocks excluding SPR of Crude Oil (Thousand Barrels)
+    const urlEiaEndingStocksExcSpr =
+        "https://api.eia.gov/v2/petroleum/stoc/wstk/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WCESTUS1";
 
-    // function GetData() {
-    //     axios.request(options).then(function (response) {
-    //         console.log(response.data);
-    //     }).catch(function (error) {
-    //         console.error(error);
-    //     });
-    // }
-
-    const url = `https://fred.stlouisfed.org/series/WPUSI012011`
-
-    function GetData() {
-        axios.get(url).then(res => console.log(res.data, 'TJOSOSAKSUDKS')).catch(err => console.log(err))
+    async function getEiaData() {
+        await Axios.get(urlEiaEndingStocksExcSpr).then(res => setData(res.data.response.data));
     }
 
-    useEffect(() => {
-        GetData()
-    }, [])
+    const handleLog = () => {
+        getEiaData()
+    }
 
     return (
         <>
-
+            {data.map(barrels => {
+                return (
+                    <div>
+                        <p>
+                            Date: {barrels.period}
+                        </p>
+                        <p>
+                            Value: {barrels.value}
+                        </p>
+                    </div>
+                )
+            })}
         </>
     )
 }

@@ -5,28 +5,35 @@ import { Line } from 'react-chartjs-2'
 import axios from 'axios'
 import './Chart.css'
 
-export default function ShowChart({ dateValue, setDateValue, coin = 'bitcoin' }) {
+export default function ShowChart({ dateValue, setDateValue }) {
     const [apiData, setApiData] = useState([])
-    const url = `https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=usd&days=${dateValue}`
-    console.log(url)
+
+    // EIA
+    const urlEiaEndingStocksExcSpr =
+        "https://api.eia.gov/v2/petroleum/stoc/wstk/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WCESTUS1&start=2000-01-01";
 
     async function GetData() {
-        await axios.get(url).then(res => setApiData(res.data)).catch(err => console.log(err))
+        await axios
+            .get(urlEiaEndingStocksExcSpr)
+            .then(res => setApiData(res.data.response.data))
+            .catch(err => console.log(err))
     }
 
+    // Data Points
+    const oilDate = apiData.map(oil => (oil.period))
+    const oilValue = apiData.map(oil => (oil.value))
+
+    // On Load
     useEffect(() => {
         GetData()
-    }, [dateValue])
-
-    const priceData = apiData?.prices?.map(el => el[1])
-    const volumeLabels = apiData?.total_volumes?.map(el => new Date(el[0]).getDate().toString()).map(el => el.length === 1 ? `0${el}` : el)
+    }, [])
 
     const data = {
-        labels: volumeLabels?.slice(0, dateValue),
+        labels: oilDate?.slice(0, dateValue),
         datasets: [
             {
                 label: '',
-                data: priceData,
+                data: oilValue,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -43,7 +50,7 @@ export default function ShowChart({ dateValue, setDateValue, coin = 'bitcoin' })
                 borderWidth: 3,
                 fontStyle: "bold",
                 fill: false,
-                data: priceData?.slice(0, dateValue),
+                data: oilValue?.slice(0, dateValue),
             }]
     }
 
