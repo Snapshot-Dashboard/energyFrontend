@@ -27,6 +27,7 @@
     font-weight: bold;
     color: var(--color2);
     justify-content: space-between;
+    padding: .5rem 0;
 }
 
 select {

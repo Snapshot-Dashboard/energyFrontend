@@ -14,7 +14,7 @@ const ButtonComponent = styled.button`
 `;
 
 function Buttons({ dateValue, setDateValue }) {
-    const [buttons] = useState([1, 5, 30, 90, 180, 365, 1301])
+    const [buttons] = useState([1, 5, 30, 90, 180, 365, 1201])
 
     const ButtonToggle = styled(ButtonComponent)`
     color: grey;

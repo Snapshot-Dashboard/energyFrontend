@@ -9,7 +9,7 @@
     flex: 1;
     border-radius: 10px;
     overflow: hidden;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .Component:hover {

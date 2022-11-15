@@ -1,13 +1,15 @@
 .TickerWrapper {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     background: rgba(0, 0, 0, .05);
+    display: flex;
+    justify-self: center;
+    align-items: center;
 }
 
 .Ticker {
-    width: 100%;
+    flex: 5;
     height: 5vh;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .1) inset;
     border-left: 1px solid rgba(0, 0, 0, .1);
@@ -52,4 +54,36 @@
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
     font-weight: bold;
     font-size: 1rem;
+}
+
+.LearnMore {
+    height: 4vh;
+    width: 18%;
+    overflow: scroll;
+    color: rgb(202, 202, 202);
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+    font-size: small;
+    font-style: italic;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .25);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.LearnMore:hover {
+    background-color: rgba(167, 167, 167, 0.05);
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
+}
+
+.LearnMore:active {
+    color: var(--color4);
+    background: rgba(0, 0, 0, .15);
 }

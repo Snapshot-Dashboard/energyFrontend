@@ -1,6 +1,7 @@
 import './News.css'
 import News from "./News"
 import News2 from "./News2"
+import News3 from "./News3"
 
 interface Props {
     news: any[]
@@ -15,6 +16,8 @@ const NewsColumns: React.FC<Props> = ({ news, setNews, news2, setNews2, newsCate
     return (
         <div className="NewsColumns">
 
+            {/* Wait on news beat APIS */}
+            {/* Build a News Component */}
             <News
                 news={news}
                 setNews={setNews}
@@ -35,7 +38,7 @@ const NewsColumns: React.FC<Props> = ({ news, setNews, news2, setNews2, newsCate
                 apiURL={'https://ny-times-news-titles-and-urls.p.rapidapi.com/news'}
                 apiHeader={'ny-times-news-titles-and-urls.p.rapidapi.com'}
             />
-            <News2
+            <News3
                 news={news}
                 setNews={setNews}
                 news2={news2}
