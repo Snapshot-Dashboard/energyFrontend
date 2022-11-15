@@ -19,7 +19,6 @@ function EconomicData() {
 
     return (
         <>
-            <button onClick={handleLog}>Log</button>
             {data.map(barrels => {
                 return (
                     <div>
