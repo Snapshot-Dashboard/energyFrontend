@@ -45,7 +45,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, element, content, nu
                             setDateValue={setDateValue} />
                         <Tile
                             element={element}
-                            content={'Enverus'}
+                            content={''}
                             hasChart={hasChart}
                             hasToggle={'No'}
                             toggle={toggle}
