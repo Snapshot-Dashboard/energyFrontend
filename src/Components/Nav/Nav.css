@@ -12,23 +12,15 @@
 }
 
 .LeftSideNavBar {
-    width: 100%;
+    flex: 1;
     display: flex;
     justify-content: start;
     align-items: center;
     height: 100%;
 }
 
-.CenterNavBar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
 .RightSideNavBar {
-    width: 33%;
+    flex: 1;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -41,26 +33,24 @@
     justify-content: center;
     align-items: center;
     margin: 1rem;
-    font-size: 3rem;
-    /* background: linear-gradient(130deg, rgb(120, 119, 119) 0%, rgba(136, 67, 139, 1) 45%, rgb(239, 136, 136) 100%); */
-    background: linear-gradient(130deg, rgb(120, 119, 119) 0%, rgb(199, 193, 200) 45%, rgb(236, 236, 236) 100%);
+    font-size: 2rem;
+    /* background: linear-gradient(130deg, rgb(236, 236, 236) 0%, rgba(136, 67, 139, 1) 45%, rgb(239, 136, 136) 100%); */
+    background: linear-gradient(130deg, rgb(198, 197, 197) 0%, rgb(255, 255, 255) 45%, rgb(236, 236, 236) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
     font-weight: 200;
 }
 
-.Title2 {
+.SubTitle {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
-    font-size: 3rem;
-    background: linear-gradient(130deg, rgb(120, 119, 119) 0%, rgb(89, 139, 67) 45%, rgb(218, 239, 136) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: small;
+    font-style: italic;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
-    font-weight: 200;
+    margin: 0 .5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .Icon {
@@ -93,7 +83,6 @@
 
 .Menu {
     width: 25vw;
-    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -12,16 +12,14 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
         setIsActive(!isActive)
     }
 
-    const pathname = window.location.pathname
 
     return (
         <div>
             <div className="NavBar">
                 <div className="LeftSideNavBar">
-                    <div className={pathname === '/' ? 'Title' : 'Title2'}>
-                        {pathname === '/' ? 'Energy' : 'Energy'}
-                    </div>
-                    <div className="CenterNavBar">
+                    <div className="Title">
+                        Energy Market Snapshot
+                        <div className="SubTitle">Powered by SandStone</div>
                     </div>
                     <div className="RightSideNavBar">
                         <div className={isActive ? "Icon IconActive" : 'Icon'} onClick={menuSelect}>
@@ -34,7 +32,6 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
             <div className={isActive ? "Menu MenuActive" : 'Menu'}>
 
                 <Link to='/'>Energy</Link>
-                <Link to='/'>INNERG</Link>
             </div>
         </div>
     )
