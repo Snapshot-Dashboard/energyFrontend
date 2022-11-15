@@ -1,0 +1,30 @@
+.File {
+    transition: .1s all ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: .25rem;
+}
+
+.File:hover {
+    color: white;
+}
+
+.FileHeader {
+    display: flex;
+    transition: .1s all ease-in-out;
+    flex-direction: row;
+}
+
+.FileTreeIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .25rem;
+}
+
+.FileTreeIconOpen {
+    transform: rotateZ(90deg);
+    margin: 0 .25rem;
+}

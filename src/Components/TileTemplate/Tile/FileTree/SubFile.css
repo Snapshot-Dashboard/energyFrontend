@@ -1,0 +1,6 @@
+.SubFile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+}

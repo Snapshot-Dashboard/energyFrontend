@@ -1,0 +1,15 @@
+.Column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    margin: 1rem 0.25rem;
+}
+
+.WideColumn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 4;
+    margin: 1rem 0.25rem;
+}

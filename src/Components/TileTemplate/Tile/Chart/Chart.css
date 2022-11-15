@@ -1,0 +1,31 @@
+.Chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.DateButtons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: white;
+    transition: .1s all ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: transparent;
+}
+
+button:active {
+    transform: scale(.8);
+}

@@ -1,0 +1,134 @@
+.NewsColumns {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5) inset;
+}
+
+.NewsColumn {
+    overflow: scroll;
+    height: 30vh;
+    width: 100%;
+    margin: 1rem .25rem;
+    flex-direction: column;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
+    background: rgba(255, 255, 255, .015);
+    border-radius: 10px;
+}
+
+.NewsHeading {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+}
+
+.NewsTitle {
+    width: 100%;
+    font-weight: bold;
+    color: var(--color2);
+    justify-content: space-between;
+}
+
+select {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+    background: transparent;
+    color: var(--color2);
+    margin: .5rem;
+    padding: .5rem;
+    cursor: pointer;
+    text-shadow: 1px 1px 15px rgba(255, 255, 255, .25);
+    outline: none;
+    transition: .2s all ease-in-out;
+    background: rgba(255, 255, 255, .015);
+}
+
+select:hover {
+    background-color: rgba(0, 0, 0, .05);
+    color: rgb(211, 211, 211);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
+}
+
+select:focus {
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, .25);
+}
+
+.News {
+    display: grid;
+    overflow: hidden;
+}
+
+.NewsList {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.NewsTitle {
+    font-size: 1rem;
+}
+
+.NewsImage {
+    object-fit: cover;
+    width: 25vw;
+    height: 10vh;
+    margin: .5rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.none {
+    display: none;
+}
+
+.NewsInfo {
+    font-size: small;
+}
+
+.NewsCard {
+    width: 80%;
+    margin: .25rem;
+    padding: .5rem;
+    font-size: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    overflow: hidden;
+    font-size: 1;
+    transition: .2s all ease-in-out;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
+    background: rgba(255, 255, 255, .015);
+}
+
+.NewsCard:hover {
+    background-color: rgba(0, 0, 0, .05);
+    color: rgb(211, 211, 211);
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, .125);
+}
+
+.NewsCard:active {
+    color: var(--color4);
+    transform: scale(.8);
+}
+
+.NewsInfo {
+    width: 90%;
+}
+
+.ShowButton {
+    width: 80%;
+    margin: .5rem 0 1rem 0;
+    padding: .5rem;
+    flex: 1;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
+    border-radius: 10px;
+}
