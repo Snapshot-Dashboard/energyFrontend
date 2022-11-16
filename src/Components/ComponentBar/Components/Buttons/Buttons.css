@@ -1,7 +1,4 @@
 .Buttons {
-    justify-content: center;
-    align-items: center;
-    display: flex;
     overflow: scroll;
     color: white;
     transition: .2s all ease-in-out;
@@ -9,7 +6,12 @@
     flex: 1;
     border-radius: 10px;
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 .5rem;
 }
 
 .Component:hover {

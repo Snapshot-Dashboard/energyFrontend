@@ -1,5 +1,5 @@
 .ComponentBar {
-    margin: -.75rem 0.25rem .75rem;
+    margin: -1rem 0.25rem 0.5rem .25rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
@@ -13,4 +13,5 @@
     border-radius: 10px;
     overflow: hidden;
     flex: 1;
+    height: 5vh;
 }

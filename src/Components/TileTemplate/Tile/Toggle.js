@@ -25,12 +25,10 @@ const ToggleInnerContainer = styled.div`
   cursor: pointer;
 `;
 
-function Slider({ toggled, handleToggle }) {
-  const outerWidth = 45;
-
+function Slider({ toggled, setToggled }) {
   return (
-    <ToggleOuterContainer toggled={toggled} outerWidth={outerWidth} onClick={handleToggle}>
-      <ToggleInnerContainer outerWidth={outerWidth} size={25} toggled={toggled} />
+    <ToggleOuterContainer toggled={toggled} outerWidth={45} onClick={() => setToggled(!toggled)}>
+      <ToggleInnerContainer outerWidth={45} size={25} toggled={toggled} />
     </ToggleOuterContainer>
   );
 }
