@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ToggleOuterContainer = styled.div`
   position: relative;
-  width: ${props => props.outerWidth}px;
+  width: ${props => props.outerWidth + 'px'};
   height: 25px;
   border-radius: 50px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);

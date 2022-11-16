@@ -7,7 +7,7 @@ interface Props {
 const Ticker: React.FC<Props> = () => {
     return (
         <>
-            <div className="TickerWrapper">
+            <a href='https://energynewsbeat.co/top-news/' target='_' className="TickerWrapper">
                 <div className="Ticker">
                     <div className="TickerInfo">
                         This article is from Full Stack Economics, a newsletter about the economy, technology, and public policy.
@@ -20,7 +20,7 @@ const Ticker: React.FC<Props> = () => {
                     </div>
                 </div>
                 <div className="LearnMore">Learn More</div>
-            </div>
+            </a>
         </>
     )
 }
