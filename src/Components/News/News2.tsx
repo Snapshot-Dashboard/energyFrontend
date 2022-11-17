@@ -3,8 +3,6 @@ import Axios from 'axios'
 import { useEffect, useState } from 'react'
 
 interface Props {
-    news: any[]
-    setNews: React.Dispatch<React.SetStateAction<any[]>>
     news2: any[]
     setNews2: React.Dispatch<React.SetStateAction<any[]>>
     newsCategory: any

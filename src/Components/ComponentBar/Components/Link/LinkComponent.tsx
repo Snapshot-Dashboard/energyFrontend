@@ -1,4 +1,5 @@
 import './Link.css'
+import EnverusImage from '../../../../Assets/images/Enverus_Logo.jpg'
 
 interface Props {
     link: string

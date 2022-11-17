@@ -29,8 +29,6 @@ const NewsColumns: React.FC<Props> = ({ news, setNews, news2, setNews2, newsCate
                 apiHeader={'ny-times-news-titles-and-urls.p.rapidapi.com'}
             />
             <News2
-                news={news}
-                setNews={setNews}
                 news2={news2}
                 setNews2={setNews2}
                 newsCategory={newsCategory}
