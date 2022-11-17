@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import Tile from '../Tile/Tile'
 import './Column.css'
+import styled from 'styled-components'
 
 interface Props {
     dateValue: number
@@ -11,9 +13,36 @@ interface Props {
     hasFileTree: boolean
 }
 
+const TileComponent = styled.div`
+    background-color: white;
+`
+
 const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTiles, hasChart, hasWideRow, hasFileTree }) => {
+    const [toggled, setToggled] = useState<boolean>(true)
+    const [tiles] = useState<any[]>([
+        {
+            content,
+            hasChart
+        },
+    ])
+
+    const TileToggle = styled(TileComponent)`
+        color: red;
+        ${({ title }): any => title && `color: white`}
+    `
+
     return (
         <div className={hasWideRow === 'Yes' ? "WideColumn" : "Column"}>
+
+            {/* {tiles.map(tile => {
+                return (
+                    <TileToggle
+                        title={tile}>
+                        {tile.content}
+                    </TileToggle>
+                )
+            })} */}
+
             {numberOfTiles === 1 ?
                 <Tile
                     content={content}

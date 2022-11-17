@@ -3,7 +3,7 @@ import { useState } from 'react'
 import ShowChart from './Chart/Chart.js'
 import FileTree from './FileTree/FileTree';
 import EnverusImage from '../../../Assets/images/Enverus_Logo.jpg'
-import Toggle from './Toggle'
+import Toggle from '../Column/Toggle'
 import './Tile.css'
 
 interface Props {
@@ -17,7 +17,8 @@ interface Props {
 }
 
 const Tile: React.FC<Props> = ({ dateValue, setDateValue, content, hasToggle, hasChart, hasImage, hasFileTree }) => {
-    const [toggled, setToggled] = useState<boolean>(false)
+    const [toggled, setToggled] = useState<boolean>(true)
+
 
     return (
         <div className={hasToggle === 'Yes' && toggled ? 'Tile2' : 'Tile'} onClick={() => setToggled(!toggled)} >

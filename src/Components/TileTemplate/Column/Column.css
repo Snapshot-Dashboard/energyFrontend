@@ -13,3 +13,7 @@
     flex: 4;
     margin: 1rem 0.25rem;
 }
+
+.Toggle {
+    opacity: .5;
+}
