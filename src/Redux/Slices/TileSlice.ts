@@ -9,7 +9,7 @@ interface tileState {
 
 const initialState: tileState = {
     value: 2,
-    chartTitle: 'Oil Data'
+    chartTitle: 'Crude Oil Reported'
 }
 
 export const TileSlice = createSlice({
