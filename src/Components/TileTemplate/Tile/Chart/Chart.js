@@ -24,9 +24,19 @@ export default function ShowChart({ dateValue, setDateValue }) {
     const urlNaturalGas =
         "https://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF"
 
+    const urlRegionalGas =
+        "https://api.eia.gov/v2/petroleum/pnp/wiup/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WPULEUS3"
+
 
 
     async function GetOilData() {
+        if (tileActive === 3) {
+            await axios
+                .get(urlRegionalGas)
+                .then(res => setApiData(res.data.response.data))
+                .catch(err => console.log(err))
+            return
+        }
         if (tileActive === 2) {
             await axios
                 .get(urlOilNoSPR)
