@@ -17,3 +17,7 @@
 .Toggle {
     opacity: .5;
 }
+
+.TileWrapper {
+    width: 100%;
+}
