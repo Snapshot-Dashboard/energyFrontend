@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-dupe-keys */
 import { useEffect, useState } from 'react'
-import { Chart as Chartjs } from 'chart.js/auto' // KEEP
+import { Chart as Chartjs } from 'chart.js/auto' // ! KEEP
 import { Line } from 'react-chartjs-2'
 import axios from 'axios'
 import './Chart.css'
@@ -62,12 +62,11 @@ export default function ShowChart({ dateValue, setDateValue }) {
 
 
 
-
-    // Data Points
+    // * Data Points
     const oilDate = apiData.map(oil => (oil.period))
     const oilValue = apiData.map(oil => (oil.value))
 
-    // On Load
+    // * On Load
     useEffect(() => {
         GetOilData()
     }, [tileActive])

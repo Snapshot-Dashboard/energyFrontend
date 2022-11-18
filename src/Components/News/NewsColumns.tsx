@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import './News.css'
 import News from "./News"
 import News2 from "./News2"
@@ -16,8 +17,9 @@ const NewsColumns: React.FC<Props> = ({ news, setNews, news2, setNews2, newsCate
     return (
         <div className="NewsColumns">
 
-            {/* Wait on news beat APIS */}
-            {/* Build a News Component */}
+            // TODO Build News App Component
+            // ? Waiting for Apis
+
             <News
                 news={news}
                 setNews={setNews}
