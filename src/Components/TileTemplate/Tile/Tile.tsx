@@ -36,11 +36,14 @@ const Tile: React.FC<Props> = ({ dateValue, setDateValue, content, hasToggle, ha
     }
 
     return (
-        // className={hasToggle === 'Yes' && toggled ? 'Tile2' : 'Tile'}
-        <div className={hasToggle === 'Yes' && count !== tileId ? 'Tile2' : 'Tile'} onClick={() => handleTile(tileId)} >
-            {content}
-            <>
-                {hasToggle === 'Yes' ? <Toggle tileId={tileId} count={count} toggled={toggled} outerWidth={0} size={25} /> : null}
+        <div className={hasToggle === 'No' ? 'Tile' : hasToggle === 'Yes' && count !== tileId ? 'Tile2' : 'HasToggleTile'} onClick={() => handleTile(tileId)} >
+            <div className='TileCard'>
+                <div className="ToggleDiv">
+                    {hasToggle === 'Yes' ? <Toggle tileId={tileId} count={count} toggled={toggled} outerWidth={0} size={25} /> : null}
+                </div>
+                <div className="TitleDiv">
+                    {content}
+                </div>
                 {hasChart === 'Yes' ? <ShowChart dateValue={dateValue} setDateValue={setDateValue} /> : null}
                 {hasFileTree ? <FileTree /> : null}
                 {hasImage === 'Yes' ?
@@ -49,7 +52,7 @@ const Tile: React.FC<Props> = ({ dateValue, setDateValue, content, hasToggle, ha
                         href='https://www.google.com/search?gs_ssp=eJzj4tLP1TcwTYovMolXYDRgdGDwYk_NK0stKi0GAFOzBvY&q=enverus&rlz=1C5CHFA_enUS932IN981&oq=enverus&aqs=chrome.1.0i131i355i433i512j46i131i199i433i465i512j0i131i433i512j0i512l4j46i175i199i512j0i512l2.3722j0j7&sourceid=chrome&ie=UTF-8'>
                         <img className='EnverusImage' src={EnverusImage} />
                     </a> : ''}
-            </>
+            </div>
         </div>
 
     )

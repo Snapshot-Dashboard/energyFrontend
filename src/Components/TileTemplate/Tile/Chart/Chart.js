@@ -13,20 +13,38 @@ export default function ShowChart({ dateValue, setDateValue }) {
     const chartTitle = useSelector(selectTitle)
     const tileActive = useSelector(selectValue)
 
+    // Regional Natural Gas
+    const urlRegionalNaturalGas =
+        "https://api.eia.gov/v2/petroleum/pnp/wiup/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WPULEUS3"
+
     // EIA
     const urlOilNoSPR =
         "https://api.eia.gov/v2/petroleum/stoc/wstk/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WCESTUS1&start=2000-01-01"
 
+    // Oil
     const urlOilSPR =
         "https://api.eia.gov/v2/petroleum/stoc/wstk/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WCSSTUS1"
+
+    // ! Natural Gas Need API Data
+    // ! Some data is missing
+    // ToDo Chat with Paul & Mike about revamping the 
+    // ToDo toggle tiles, so natural gas is on 
+    // ToDo one side of the graph and the oil
+    // ToDo is on the other side of the graph
 
     // Natural Gas
     const urlNaturalGas =
         "https://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF"
 
-
-
-    async function GetOilData() {
+    // ? Refactor If Possible, a lot of DRY
+    async function GetChartData() {
+        if (tileActive === 3) {
+            await axios
+                .get(urlRegionalNaturalGas)
+                .then(res => setApiData(res.data.response.data))
+                .catch(err => console.log(err))
+            return
+        }
         if (tileActive === 2) {
             await axios
                 .get(urlOilNoSPR)
@@ -51,14 +69,47 @@ export default function ShowChart({ dateValue, setDateValue }) {
     }
 
 
-
     // * Data Points
     const oilDate = apiData.map(oil => (oil.period))
     const oilValue = apiData.map(oil => (oil.value))
 
+    // * Adjustable
+    let radius
+    let lineWidth
+    let color = 'rgba(25, 30, 24, 0.2)'
+    if (dateValue <= 1) {
+        radius = 12
+        lineWidth = 4
+        color = 'rgba(25, 30, 24, 0.1)'
+    } else if (dateValue <= 5) {
+        radius = 9
+        lineWidth = 2.5
+        color = 'rgba(25, 30, 24, 0.2)'
+    } else if (dateValue <= 30) {
+        radius = 4
+        lineWidth = 1.5
+        color = 'rgba(25, 30, 24, 0.3)'
+    } else if (dateValue <= 90) {
+        radius = 2
+        lineWidth = 1
+        color = 'rgba(25, 30, 24, 0.4)'
+    } else if (dateValue <= 180) {
+        radius = 1
+        lineWidth = .75
+        color = 'rgba(25, 30, 24, 0.5)'
+    } else if (dateValue <= 365) {
+        radius = .5
+        lineWidth = .5
+        color = 'rgba(25, 30, 24, 0.6)'
+    } else if (dateValue <= 1500) {
+        radius = .1
+        lineWidth = .25
+        color = 'rgba(25, 30, 24, 0.7)'
+    }
+
     // * On Load
     useEffect(() => {
-        GetOilData()
+        GetChartData()
     }, [tileActive])
 
     const data = {
@@ -68,11 +119,12 @@ export default function ShowChart({ dateValue, setDateValue }) {
                 label: '',
                 data: oilValue,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
+                    color,
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
                     'rgba(255, 255, , 0.2)'
                 ],
                 lineTension: .4,
@@ -80,9 +132,9 @@ export default function ShowChart({ dateValue, setDateValue }) {
                     'rgba(255, 255, 255, 1)',
                     'rgba(255, 255, 255, 1)',
                 ],
-                borderWidth: 3,
+                borderWidth: lineWidth,
                 fontStyle: "bold",
-                fill: false,
+                fill: true,
                 data: oilValue?.slice(0, dateValue),
             }]
     }
@@ -96,11 +148,11 @@ export default function ShowChart({ dateValue, setDateValue }) {
                 padding: 1,
             },
             responsive: true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: true,
         },
         elements: {
             point: {
-                radius: .1,
+                radius: radius,
             },
         },
         scales: {
@@ -125,14 +177,15 @@ export default function ShowChart({ dateValue, setDateValue }) {
     };
 
     return (
-        <>
-            <div className="Chart">
+        <div className="Chart">
+            <div className="TitleDiv">
                 {chartTitle}
+            </div>
+            <div className="ChartDiv">
                 <Line
                     data={data}
-                    options={options}
-                />
+                    options={options} />
             </div>
-        </>
+        </div>
     )
 }

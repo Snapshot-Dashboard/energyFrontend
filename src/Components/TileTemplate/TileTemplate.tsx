@@ -9,6 +9,7 @@ interface Props {
 const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue }) => {
     return (
         <div className='Tiles'>
+
             <Column
                 content={''}
                 numberOfTiles={3}
@@ -17,6 +18,7 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue }) => {
                 hasFileTree={false}
                 dateValue={dateValue}
                 setDateValue={setDateValue} />
+
             <Column
                 content={''}
                 numberOfTiles={1}
@@ -25,6 +27,7 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue }) => {
                 hasFileTree={false}
                 dateValue={dateValue}
                 setDateValue={setDateValue} />
+
             <Column
                 content={''}
                 numberOfTiles={2}

@@ -14,7 +14,28 @@
     font-size: small;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
     overflow: hidden;
+}
+
+.HasToggleTile {
+    width: 100%;
+    margin: .25rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    color: white;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+    flex: 1;
+    border-radius: 10px;
+    font-size: small;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
+    overflow: hidden;
     background: rgba(255, 255, 255, .015);
+    background: linear-gradient(rgb(76, 106, 77), rgb(76, 101, 66)) padding-box,
+        linear-gradient(to right, #847653, #d9ba66a9) border-box;
+    border: 2px solid transparent;
 }
 
 .Tile2 {
@@ -35,6 +56,7 @@
     overflow: hidden;
     background: rgba(255, 255, 255, .015);
     opacity: .25;
+    border: 2px solid transparent;
 }
 
 .DarkTile {
@@ -88,4 +110,22 @@
 .EnverusImage {
     object-fit: cover;
     width: 100%;
+}
+
+.TileCard {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ToggleDiv {
+    margin: .5rem 0;
+}
+
+.TitleDiv {
+    margin: .5rem 0;
+    font-weight: 700;
 }

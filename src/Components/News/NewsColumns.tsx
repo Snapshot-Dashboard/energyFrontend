@@ -13,13 +13,11 @@ interface Props {
     setNewsCategory: React.Dispatch<React.SetStateAction<any>>
 }
 
+// TODO Build News Component That is reuseable
+
 const NewsColumns: React.FC<Props> = ({ news, setNews, news2, setNews2, newsCategory, setNewsCategory }) => {
     return (
         <div className="NewsColumns">
-
-            // TODO Build News App Component
-            // ? Waiting for Apis
-
             <News
                 news={news}
                 setNews={setNews}

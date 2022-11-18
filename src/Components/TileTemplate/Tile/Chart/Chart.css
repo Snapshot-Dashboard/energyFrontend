@@ -6,12 +6,16 @@
     width: 90%;
 }
 
-.DateButtons {
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+.ChartDiv {
+    width: 100%;
 }
+
+@media (min-width: 800px) {
+    .ChartDiv {
+        width: 75%;
+    }
+}
+
 
 button {
     background: transparent;
