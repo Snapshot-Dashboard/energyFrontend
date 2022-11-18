@@ -129,3 +129,9 @@
     margin: .5rem 0;
     font-weight: 700;
 }
+
+.DataDiv {
+    font-weight: 300;
+    font-style: italic;
+    font-size: smaller;
+}

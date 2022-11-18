@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../Store/Store'
-
 interface tileState {
     value: number,
     chartTitle: string
@@ -9,7 +8,7 @@ interface tileState {
 
 const initialState: tileState = {
     value: 2,
-    chartTitle: 'Crude Oil Reported'
+    chartTitle: 'Crude Oil Reported',
 }
 
 export const TileSlice = createSlice({

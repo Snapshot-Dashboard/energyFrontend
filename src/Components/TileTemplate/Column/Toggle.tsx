@@ -47,11 +47,11 @@ const Slider: React.FC<Props> = ({ toggled, tileId, size }) => {
   const count = useSelector(selectValue)
 
   return (
-    <>
+    <div className="ToggleDiv">
       <ToggleOuterContainer outerWidth={outerWidth} toggled={toggled} tileId={tileId} count={count} >
         <ToggleInnerContainer outerWidth={outerWidth} size={size} toggled={toggled} tileId={tileId} count={count} />
       </ToggleOuterContainer>
-    </>
+    </div>
   );
 }
 
