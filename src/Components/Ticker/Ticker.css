@@ -59,7 +59,7 @@
     height: 3.5vh;
     width: 20%;
     overflow: scroll;
-    color: rgb(222, 222, 222);
+    color: black;
     transition: .2s all ease-in-out;
     cursor: pointer;
     font-size: small;
@@ -73,8 +73,7 @@
     align-items: center;
     flex-direction: row;
     border-width: 2px;
-    background: linear-gradient(rgb(76, 106, 77), rgb(76, 101, 66)) padding-box,
-        linear-gradient(to right, #847653, #d9ba66a9) border-box;
+    background: linear-gradient(130deg, rgb(254, 254, 254) 0%, rgb(244, 244, 244) 45%, rgb(255, 255, 255) 100%) padding-box, linear-gradient(to right, #c59e3e, #d9ba66a9) border-box;
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
     border-left: 2px solid transparent;
@@ -86,8 +85,8 @@
     background-color: rgba(167, 167, 167, 0.05);
     color: rgb(255, 255, 255);
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
-    background: linear-gradient(rgb(116, 143, 117), rgb(83, 99, 78)) padding-box,
-        linear-gradient(to right, rgb(128, 128, 128), rgb(223, 223, 223)) border-box;
+    background: linear-gradient(rgb(30, 115, 189), rgb(12, 82, 144)) padding-box,
+        linear-gradient(to right, #c59e3e, #d9ba66a9) border-box;
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
     border-left: 2px solid transparent;

@@ -19,22 +19,15 @@ export default function ShowChart({ dateValue, setDateValue }) {
 
     // EIA
     const urlOilNoSPR =
-        "https://api.eia.gov/v2/petroleum/stoc/wstk/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WCESTUS1&start=2000-01-01"
+        "https://api.eia.gov/v2/petroleum/stoc/wstk/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WCESTUS1"
 
     // Oil
     const urlOilSPR =
         "https://api.eia.gov/v2/petroleum/stoc/wstk/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WCSSTUS1"
 
-    // ! Natural Gas Need API Data
-    // ! Some data is missing
-    // ToDo Chat with Paul & Mike about revamping the 
-    // ToDo toggle tiles, so natural gas is on 
-    // ToDo one side of the graph and the oil
-    // ToDo is on the other side of the graph
-
     // Natural Gas
     const urlNaturalGas =
-        "https://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF"
+        "hhttps://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF"
 
     // ? Refactor If Possible, a lot of DRY
     async function GetChartData() {
@@ -55,7 +48,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
         if (tileActive === 1) {
             await axios
                 .get(urlNaturalGas)
-                .then(res => console.log(res.data.response))
+                .then(res => console.log(res.data)) // ! Api is empty
                 .catch(err => console.log(err))
             return
         }
@@ -80,31 +73,31 @@ export default function ShowChart({ dateValue, setDateValue }) {
     if (dateValue <= 1) {
         radius = 12
         lineWidth = 4
-        color = 'rgba(25, 30, 24, 0.1)'
+        color = 'rgba(25, 30, 24, 0.05)'
     } else if (dateValue <= 5) {
         radius = 9
         lineWidth = 2.5
-        color = 'rgba(25, 30, 24, 0.2)'
+        color = 'rgba(25, 30, 24, 0.075)'
     } else if (dateValue <= 30) {
         radius = 4
         lineWidth = 1.5
-        color = 'rgba(25, 30, 24, 0.3)'
+        color = 'rgba(25, 30, 24, 0.1)'
     } else if (dateValue <= 90) {
         radius = 2
         lineWidth = 1
-        color = 'rgba(25, 30, 24, 0.4)'
+        color = 'rgba(25, 30, 24, 0.125)'
     } else if (dateValue <= 180) {
         radius = 1
         lineWidth = .75
-        color = 'rgba(25, 30, 24, 0.5)'
+        color = 'rgba(25, 30, 24, 0.15)'
     } else if (dateValue <= 365) {
         radius = .5
         lineWidth = .5
-        color = 'rgba(25, 30, 24, 0.6)'
+        color = 'rgba(25, 30, 24, 0.175)'
     } else if (dateValue <= 1500) {
         radius = .1
         lineWidth = .25
-        color = 'rgba(25, 30, 24, 0.7)'
+        color = 'rgba(25, 30, 24, 0.2)'
     }
 
     // * On Load
@@ -127,7 +120,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
                     'rgba(153, 102, 255, 0.5)',
                     'rgba(255, 255, , 0.2)'
                 ],
-                lineTension: .4,
+                lineTension: .25,
                 borderColor: [
                     'rgba(255, 255, 255, 1)',
                     'rgba(255, 255, 255, 1)',

@@ -2,7 +2,6 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Tile from '../Tile/Tile'
 import './Column.css'
-
 interface Props {
     dateValue: number
     setDateValue: React.Dispatch<React.SetStateAction<number>>
@@ -19,6 +18,8 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
     const [OilNoSPR, setOilNoSPR] = useState<string>('')
     const [OilSPR, setOilSPR] = useState<string>('')
 
+    // TODO Refactor a lot of this code and streamline for useability
+
     // Regional Natural Gas
     const urlRegionalNaturalGas =
         "https://api.eia.gov/v2/petroleum/pnp/wiup/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WPULEUS3"
@@ -34,8 +35,11 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
     const urlNaturalGas =
         "https://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF"
 
+    // ? Can I create a API component that is highly reuseable?
+    // ? I should use that for the New Component as well
 
     useEffect(() => {
+
         async function RegionalNaturalGasData() {
             await axios
                 .get(urlRegionalNaturalGas)
@@ -43,6 +47,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                 .catch(err => console.log(err))
         }
         RegionalNaturalGasData()
+
         async function getNaturalGasData() {
             await axios
                 .get(urlNaturalGas)
@@ -50,6 +55,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                 .catch(err => console.log(err))
         }
         getNaturalGasData()
+
         async function getOilNoSPRData() {
             await axios
                 .get(urlOilNoSPR)
@@ -57,6 +63,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                 .catch(err => console.log(err))
         }
         getOilNoSPRData()
+
         async function getOilData() {
             await axios
                 .get(urlOilSPR)
@@ -64,6 +71,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                 .catch(err => console.log(err))
         }
         getOilData()
+
     }, [])
 
     return (

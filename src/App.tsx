@@ -8,10 +8,8 @@ import ComponentBar from './Components/ComponentBar/ComponentBar';
 
 const App: React.FC = () => {
   const [news, setNews] = useState<any[]>([])
-  const [news2, setNews2] = useState<any[]>([])
   const [isActive, setIsActive] = useState<boolean>(false)
   const [dateValue, setDateValue] = useState<number>(90)
-  const [newsCategory, setNewsCategory] = useState<any>('main')
 
   return (
     <div className="App">
@@ -32,11 +30,7 @@ const App: React.FC = () => {
 
       <NewsColumns
         news={news}
-        setNews={setNews}
-        news2={news2}
-        setNews2={setNews2}
-        newsCategory={newsCategory}
-        setNewsCategory={setNewsCategory} />
+        setNews={setNews} />
 
     </div>
   );

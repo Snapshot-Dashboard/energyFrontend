@@ -8,33 +8,61 @@ interface Props {
 }
 
 const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
-    const menuSelect = () => {
-        setIsActive(!isActive)
-    }
-
+    const menuSelect = () => setIsActive(!isActive)
 
     return (
-        <div>
-            <div className="NavBar">
-                <div className="LeftSideNavBar">
-                    <div className="Title">
-                        Energy Market Snapshot
-                        <div className="SubTitle">Powered by SandStone</div>
-                    </div>
-                    <div className="RightSideNavBar">
-                        <div className={isActive ? "Icon IconActive" : 'Icon'} onClick={menuSelect}>
-                            <AiOutlineMenu />
+        <>
+            {renderNav()}
+            {renderMenu()}
+        </>
+    )
+
+    // ! Handle Methods
+    function renderNav() {
+        return (
+            <>
+                <div className="NavBar">
+                    <div className="LeftSideNavBar">
+                        {renderTitle()}
+                        <div className="RightSideNavBar">
+                            {renderSlider()}
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
+        )
+    }
 
-            <div className={isActive ? "Menu MenuActive" : 'Menu'}>
+    function renderTitle() {
+        return (
+            <>
+                <div className="Title">
+                    Oil & Gas Snapshot
+                    <div className="SubTitle">Powered by Snapshot</div>
+                </div>
+            </>
+        )
+    }
 
-                <Link to='/'>Energy</Link>
-            </div>
-        </div>
-    )
+    function renderSlider() {
+        return (
+            <>
+                <div className={isActive ? "Icon IconActive" : 'Icon'} onClick={menuSelect}>
+                    <AiOutlineMenu />
+                </div>
+            </>
+        )
+    }
+
+    function renderMenu() {
+        return (
+            <>
+                <div className={isActive ? "Menu MenuActive" : 'Menu'}>
+                    <Link to='/'>Energy</Link>
+                </div>
+            </>
+        )
+    }
 }
 
 export default Nav

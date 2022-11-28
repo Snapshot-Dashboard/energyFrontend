@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: row;
     overflow: scroll;
-    color: white;
+    color: black;
     transition: .2s all ease-in-out;
     cursor: pointer;
     flex: 1;

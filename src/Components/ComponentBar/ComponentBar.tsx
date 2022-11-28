@@ -12,7 +12,7 @@ const ComponentBar: React.FC<Props> = ({ dateValue, setDateValue }) => {
         <div className='ComponentBar'>
             <LinkComponent
                 link={'https://energynewsbeat.co'}
-                textContent={' Provided by Energy News Beat™'} />
+                textContent={'News & Analysis provided by Energy News Beat™'} />
             <Buttons
                 dateValue={dateValue}
                 setDateValue={setDateValue} />

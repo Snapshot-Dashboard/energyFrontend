@@ -10,9 +10,13 @@
     width: 100%;
     margin: .5rem .25rem;
     flex-direction: column;
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
     background: rgba(255, 255, 255, .015);
     border-radius: 10px;
+}
+
+.NewsColumn::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
 
 .NewsHeading {
@@ -25,34 +29,9 @@
 .NewsTitle {
     width: 100%;
     font-weight: bold;
-    color: var(--color2);
+    color: black;
     justify-content: space-between;
     padding: .5rem 0;
-}
-
-select {
-    border-radius: 5px;
-    border: none;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
-    background: transparent;
-    color: var(--color2);
-    margin: .5rem;
-    padding: .5rem;
-    cursor: pointer;
-    text-shadow: 1px 1px 15px rgba(255, 255, 255, .25);
-    outline: none;
-    transition: .2s all ease-in-out;
-    background: rgba(255, 255, 255, .015);
-}
-
-select:hover {
-    background-color: rgba(0, 0, 0, .05);
-    color: rgb(211, 211, 211);
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
-}
-
-select:focus {
-    box-shadow: 1px 1px 10px rgba(255, 255, 255, .25);
 }
 
 .News {
@@ -72,34 +51,15 @@ select:focus {
     font-size: 1rem;
 }
 
-.NewsImage {
-    object-fit: cover;
-    width: 25vw;
-    height: 10vh;
-    margin: .5rem;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.none {
-    display: none;
-}
-
-.NewsInfo {
-    font-size: small;
-}
-
 .NewsCard {
-    width: 80%;
-    margin: .25rem;
-    padding: .5rem;
+    width: 90%;
     font-size: .75rem;
     display: flex;
+    margin: 2.5% 5%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: white;
+    color: black;
     overflow: hidden;
     font-size: 1;
     transition: .2s all ease-in-out;
@@ -114,11 +74,11 @@ select:focus {
     background-color: rgba(0, 0, 0, .05);
     color: rgb(211, 211, 211);
     box-shadow: 1px 1px 25px rgba(0, 0, 0, .125);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
 }
 
 .NewsCard:active {
     color: var(--color4);
-    transform: scale(.8);
 }
 
 .NewsInfo {
@@ -132,4 +92,16 @@ select:focus {
     flex: 1;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
     border-radius: 10px;
+    color: black;
+}
+
+.SeeMoreButton {
+    color: black;
+    opacity: .5;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+}
+
+.SeeMoreButton:hover {
+    opacity: 1;
 }

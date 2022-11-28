@@ -20,12 +20,13 @@ export const TileSlice = createSlice({
         },
         setChartTitle: (state, action: PayloadAction<string>) => {
             state.chartTitle = action.payload
-        }
+        },
+
     }
 })
 
 export const selectValue = (state: RootState) => state.Tile.value
 export const selectTitle = (state: RootState) => state.Tile.chartTitle
 
-export const { setValue, setChartTitle } = TileSlice.actions
 export default TileSlice.reducer
+export const { setValue, setChartTitle } = TileSlice.actions

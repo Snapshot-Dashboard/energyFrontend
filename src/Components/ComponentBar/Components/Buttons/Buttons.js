@@ -6,7 +6,7 @@ const ButtonComponent = styled.button`
     transition: .2s all ease-in-out;
     font-size: 1rem;
     &:hover {
-        color: white
+        color: black;
     }
     &:active {
         transform: scale(.9)
@@ -18,7 +18,7 @@ function Buttons({ dateValue, setDateValue }) {
 
     const ButtonToggle = styled(ButtonComponent)`
     color: grey;
-    ${({ active }) => active && `color: white`}
+    ${({ active }) => active && `color: black`}
     `
 
     const ToggleButtonDates = () => {

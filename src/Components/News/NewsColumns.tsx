@@ -1,50 +1,34 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import './News.css'
 import News from "./News"
-import News2 from "./News2"
-import News3 from "./News3"
 
 interface Props {
     news: any[]
     setNews: React.Dispatch<React.SetStateAction<any[]>>
-    news2: any[]
-    setNews2: React.Dispatch<React.SetStateAction<any[]>>
-    newsCategory: any
-    setNewsCategory: React.Dispatch<React.SetStateAction<any>>
 }
 
 // TODO Build News Component That is reuseable
 
-const NewsColumns: React.FC<Props> = ({ news, setNews, news2, setNews2, newsCategory, setNewsCategory }) => {
+const NewsColumns: React.FC<Props> = ({ news, setNews }) => {
     return (
         <div className="NewsColumns">
             <News
                 news={news}
                 setNews={setNews}
-                news2={news2}
-                setNews2={setNews2}
-                newsCategory={newsCategory}
-                setNewsCategory={setNewsCategory}
-                apiURL={'https://ny-times-news-titles-and-urls.p.rapidapi.com/news'}
-                apiHeader={'ny-times-news-titles-and-urls.p.rapidapi.com'}
+                newsTitle={'US Energy'}
+                apiURL={'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat8/feed/atom&count=10'}
             />
-            <News2
-                news2={news2}
-                setNews2={setNews2}
-                newsCategory={newsCategory}
-                setNewsCategory={setNewsCategory}
-                apiURL={'https://ny-times-news-titles-and-urls.p.rapidapi.com/news'}
-                apiHeader={'ny-times-news-titles-and-urls.p.rapidapi.com'}
-            />
-            <News3
+            <News
                 news={news}
                 setNews={setNews}
-                news2={news2}
-                setNews2={setNews2}
-                newsCategory={newsCategory}
-                setNewsCategory={setNewsCategory}
-                apiURL={'https://ny-times-news-titles-and-urls.p.rapidapi.com/news'}
-                apiHeader={'ny-times-news-titles-and-urls.p.rapidapi.com'}
+                newsTitle={'E&P News'}
+                apiURL={'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat8/feed/atom&count=10'}
+            />
+            <News
+                news={news}
+                setNews={setNews}
+                newsTitle={'Finance News'}
+                apiURL={'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat8/feed/atom&count=10'}
             />
 
         </div>

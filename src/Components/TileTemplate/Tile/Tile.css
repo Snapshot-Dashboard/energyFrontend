@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     overflow: scroll;
-    color: white;
+    color: black;
     transition: .2s all ease-in-out;
     cursor: pointer;
     flex: 1;
@@ -33,8 +33,8 @@
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
     overflow: hidden;
     background: rgba(255, 255, 255, .015);
-    background: linear-gradient(rgb(76, 106, 77), rgb(76, 101, 66)) padding-box,
-        linear-gradient(to right, #847653, #d9ba66a9) border-box;
+    background: linear-gradient(rgb(30, 115, 189), rgb(12, 82, 144)) padding-box,
+        linear-gradient(to right, #c59e3e, #d9ba66a9) border-box;
     border: 2px solid transparent;
 }
 
@@ -46,7 +46,7 @@
     align-items: center;
     flex-direction: column;
     overflow: scroll;
-    color: white;
+    color: black;
     transition: .2s all ease-in-out;
     cursor: pointer;
     flex: 1;
@@ -55,7 +55,7 @@
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
     overflow: hidden;
     background: rgba(255, 255, 255, .015);
-    opacity: .25;
+    opacity: .75;
     border: 2px solid transparent;
 }
 

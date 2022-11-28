@@ -1,9 +1,8 @@
 .NavBar {
-    height: 10vh;
     width: 100%;
     background: transparent;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,12 +33,11 @@
     align-items: center;
     margin: 1rem;
     font-size: 2rem;
-    /* background: linear-gradient(130deg, rgb(236, 236, 236) 0%, rgba(136, 67, 139, 1) 45%, rgb(239, 136, 136) 100%); */
-    background: linear-gradient(130deg, rgb(198, 197, 197) 0%, rgb(255, 255, 255) 45%, rgb(236, 236, 236) 100%);
+    background: linear-gradient(130deg, rgb(110, 176, 234) 0%, rgb(26, 99, 164) 45%, rgb(30, 115, 189) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .SubTitle {
