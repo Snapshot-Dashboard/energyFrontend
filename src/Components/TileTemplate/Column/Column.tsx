@@ -110,7 +110,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                             hasFileTree={hasFileTree}
                             dateValue={dateValue}
                             setDateValue={setDateValue} />
-                    </> : numberOfTiles === 3 ?
+                    </> : numberOfTiles === 4 ?
                         <>
                             <Tile
                                 tileId={0}
@@ -139,6 +139,16 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                                 hasChart={hasChart}
                                 hasToggle={'Yes'}
                                 hasImage={'No'}
+                                hasFileTree={hasFileTree}
+                                dateValue={dateValue}
+                                setDateValue={setDateValue} />
+                            <Tile
+                                tileId={2}
+                                content={''}
+                                data={''}
+                                hasChart={hasChart}
+                                hasToggle={'No'}
+                                hasImage={'Yes'}
                                 hasFileTree={hasFileTree}
                                 dateValue={dateValue}
                                 setDateValue={setDateValue} />

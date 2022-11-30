@@ -12,7 +12,7 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue }) => {
 
             <Column
                 content={''}
-                numberOfTiles={3}
+                numberOfTiles={4}
                 hasChart={'No'}
                 hasWideRow={'No'}
                 hasFileTree={false}

@@ -17,6 +17,12 @@
     }
 }
 
+@media (min-width: 1200px) {
+    .ChartDiv {
+        width: 700px;
+    }
+}
+
 
 button {
     background: transparent;

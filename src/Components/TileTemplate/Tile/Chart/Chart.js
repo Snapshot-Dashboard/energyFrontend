@@ -175,11 +175,10 @@ export default function ShowChart({ dateValue, setDateValue }) {
             <div className="TitleDiv">
                 {chartTitle}
             </div>
-            <div className="ChartDiv">
-                <Line
-                    data={data}
-                    options={options} />
-            </div>
+            <Line
+                className="ChartDiv"
+                data={data}
+                options={options} />
         </div>
     )
 }
