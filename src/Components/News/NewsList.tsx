@@ -12,25 +12,31 @@ const NewsList: React.FC<Props> = ({ news, index }) => {
         <>
             {news.slice(0, index).map((newsItem, idx) => {
                 const regex = /(<([^>]+)>)/ig;
-                const result = newsItem.description.replace(regex, '');
+                const title = newsItem.description.replace(regex, '');
+                const description = newsItem.description.replace(regex, '');
+
+                // TODO Finish News Card & Make News Cards Independent
                 return (
-                    <div className="NewsCard" key={idx}>
-                        <div className='NewsTitle'>
-                            {newsItem.title}
-                        </div>
-                        {renderStories(result)}
+                    <div key={idx}>
+                        {renderStories(title, description)}
                     </div>
                 )
             })}
         </>
     )
 
-    function renderStories(result: string) {
+    function renderStories(title: string, description: string) {
         return (
             <>
-                <p>
-                    {showStories ? result.slice(0, 500) : result.slice(0, 100)}<button className='SeeMoreButton' onClick={() => setShowStories(!showStories)}>{showStories ? '... See Less' : '...See More'}</button>
-                </p>
+                <div className="NewsCard">
+
+                    <div className='NewsTitle'>
+                        {title.length >= 100 ? title.slice(0, 100) + '...' : title}
+                    </div>
+                    <p>
+                        {showStories ? description.slice(0, 500) : description.slice(0, 100)}<button className='SeeMoreButton' onClick={() => setShowStories(!showStories)}>{showStories ? '... See Less' : '...See More'}</button>
+                    </p>
+                </div>
             </>
         )
     }

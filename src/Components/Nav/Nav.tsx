@@ -38,7 +38,7 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
             <>
                 <div className="Title">
                     Oil & Gas Snapshot
-                    <div className="SubTitle">Powered by Snapshot</div>
+                    <div className="SubTitle">Powered by Snapshot Dashboard</div>
                 </div>
             </>
         )

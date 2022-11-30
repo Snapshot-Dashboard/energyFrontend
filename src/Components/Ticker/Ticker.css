@@ -21,22 +21,28 @@
     overflow: hidden;
 }
 
+.TickerItem {
+    transition: .2s all ease-in-out;
+}
+
+.TickerItem:hover {
+    opacity: .5;
+}
+
+.None {
+    display: none;
+}
+
 @keyframes slidein {
     0% {
         transform: translateX(55%);
-        opacity: 1;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    50% {
-        opacity: 1;
-    }
-
     100% {
-        transform: translateX(-100%);
-        opacity: 0;
+        transform: translateX(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -47,12 +53,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    animation: slidein 180s linear infinite;
+    color: black;
+    animation: slidein 160s linear infinite;
     white-space: nowrap;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
     font-weight: bold;
     font-size: 1rem;
+}
+
+.TickerDash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 2rem;
+    opacity: .25;
 }
 
 .LearnMore {
