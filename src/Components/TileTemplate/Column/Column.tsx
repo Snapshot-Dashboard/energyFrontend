@@ -124,8 +124,8 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                                 setDateValue={setDateValue} />
                             <Tile
                                 tileId={1}
-                                content={'Natural Gas Investments'}
-                                data={NaturalGasData}
+                                content={'Regional Natural Gas'}
+                                data={RegionalNaturalGasData}
                                 hasChart={hasChart}
                                 hasToggle={'Yes'}
                                 hasImage={'No'}

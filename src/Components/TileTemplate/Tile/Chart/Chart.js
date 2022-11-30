@@ -109,7 +109,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
         labels: oilDate?.slice(0, dateValue),
         datasets: [
             {
-                label: '',
+                label: 'Barrels',
                 data: oilValue,
                 backgroundColor: [
                     // color,
@@ -136,7 +136,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
     const options = {
         plugins: {
             legend: {
-                display: false,
+                display: true,
             },
             layout: {
                 padding: 1,
