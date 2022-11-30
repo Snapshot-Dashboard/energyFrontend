@@ -72,31 +72,31 @@ export default function ShowChart({ dateValue, setDateValue }) {
     // let color = 'rgba(25, 30, 24, 0.2)'
     if (dateValue <= 1) {
         radius = 12
-        lineWidth = 4
+        lineWidth = 5
         // color = 'rgba(25, 30, 24, 0.05)'
     } else if (dateValue <= 5) {
         radius = 9
-        lineWidth = 3
+        lineWidth = 4
         // color = 'rgba(25, 30, 24, 0.075)'
     } else if (dateValue <= 30) {
         radius = 4
-        lineWidth = 2
+        lineWidth = 3
         // color = 'rgba(25, 30, 24, 0.1)'
     } else if (dateValue <= 90) {
         radius = 2
-        lineWidth = 1
+        lineWidth = 2
         // color = 'rgba(25, 30, 24, 0.125)'
     } else if (dateValue <= 180) {
         radius = 1
-        lineWidth = .75
+        lineWidth = 1
         // color = 'rgba(25, 30, 24, 0.15)'
     } else if (dateValue <= 365) {
         radius = .5
-        lineWidth = .5
+        lineWidth = .75
         // color = 'rgba(25, 30, 24, 0.175)'
     } else if (dateValue <= 1500) {
         radius = .1
-        lineWidth = .25
+        lineWidth = .5
         // color = 'rgba(25, 30, 24, 0.2)'
     }
 
@@ -156,7 +156,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
                     drawTicks: false,
                 },
                 ticks: {
-                    display: false,
+                    display: true,
                 },
             },
             x: {
@@ -164,7 +164,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
                     display: false,
                 },
                 ticks: {
-                    display: false,
+                    display: true,
                 },
             },
         },
