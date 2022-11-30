@@ -28,7 +28,7 @@ function Buttons({ dateValue, setDateValue }) {
                     <ButtonToggle
                         active={dateValue === button}
                         onClick={() => setDateValue(button)}>
-                        {button > 1200 ? 'Max' : button > 364 ? Math.floor(button / 365) + 'y' : button > 29 ? Math.floor(button / 30) + 'm' : button + 'd'}
+                        {button > 1200 ? 'MAX' : button > 364 ? Math.floor(button / 365) + 'Y' : button > 29 ? Math.floor(button / 30) + 'M' : button + 'D'}
                     </ButtonToggle>
                 ))}
             </>

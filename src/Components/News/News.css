@@ -1,17 +1,14 @@
 .NewsColumns {
     display: flex;
     justify-content: space-between;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5) inset;
 }
 
 .NewsColumn {
     overflow: scroll;
-    height: 28vh;
     width: 100%;
-    margin: .5rem .25rem;
     flex-direction: column;
     background: rgba(255, 255, 255, .015);
-    border-radius: 10px;
+    height: 33vh;
 }
 
 .NewsColumn::-webkit-scrollbar {
@@ -24,6 +21,16 @@
     justify-content: center;
     align-items: center;
     margin: .5rem;
+}
+
+.NewsHead {
+    width: 100%;
+    font-weight: bold;
+    color: black;
+    justify-content: space-between;
+    padding: .5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 .NewsTitle {
@@ -52,10 +59,9 @@
 }
 
 .NewsCard {
-    width: 90%;
+    width: 100%;
     font-size: .75rem;
     display: flex;
-    margin: 2.5% 5%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -65,9 +71,9 @@
     transition: .2s all ease-in-out;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
     cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
     background: rgba(255, 255, 255, .015);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
 }
 
 .NewsCard:hover {
@@ -79,6 +85,10 @@
 
 .NewsCard:active {
     color: var(--color4);
+}
+
+.NewsDesc {
+    width: 95%;
 }
 
 .NewsInfo {

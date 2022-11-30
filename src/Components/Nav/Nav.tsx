@@ -58,7 +58,7 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
         return (
             <>
                 <div className={isActive ? "Menu MenuActive" : 'Menu'}>
-                    <Link to='/'>Energy</Link>
+                    <Link to='/'>Support</Link>
                 </div>
             </>
         )

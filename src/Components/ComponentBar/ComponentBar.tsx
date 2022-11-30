@@ -17,7 +17,7 @@ const ComponentBar: React.FC<Props> = ({ dateValue, setDateValue }) => {
                 dateValue={dateValue}
                 setDateValue={setDateValue} />
             <LinkComponent
-                link={'https://sportsubmit.netlify.app/'}
+                link={''}
                 textContent={'Want a personalized dashboard?'} />
         </div>
     )

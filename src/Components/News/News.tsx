@@ -12,7 +12,7 @@ interface Props {
 
 const News: React.FC<Props> = ({ news, setNews, newsTitle, apiURL }) => {
     const [showMoreActive, setShowMoreActive] = useState<boolean>(false)
-    const [index, setIndex] = useState<number>(1)
+    const [index, setIndex] = useState<number>(3)
 
     const handleShowMore = () => {
         if (!showMoreActive) {
@@ -21,7 +21,7 @@ const News: React.FC<Props> = ({ news, setNews, newsTitle, apiURL }) => {
             return
         }
         setShowMoreActive(false)
-        setIndex(1)
+        setIndex(3)
     }
 
     useEffect(() => {
@@ -29,17 +29,19 @@ const News: React.FC<Props> = ({ news, setNews, newsTitle, apiURL }) => {
     }, [])
 
     return (
-        <div className='NewsColumn'>
+        <div>
             {renderNewsTitle()}
-            <NewsList news={news} index={index} />
-            {renderShowMore()}
+            <div className='NewsColumn'>
+                <NewsList news={news} index={index} />
+                {renderShowMore()}
+            </div>
         </div>
     )
 
     function renderNewsTitle() {
         return (
             <>
-                <div className="NewsTitle">
+                <div className="NewsHead">
                     {newsTitle}
                 </div>
             </>
@@ -48,8 +50,9 @@ const News: React.FC<Props> = ({ news, setNews, newsTitle, apiURL }) => {
 
     function renderShowMore() {
         return (
+            // ! Can Re-Add button back just change NewsList Component .slice() to index instead of news.length
             <>
-                <button className='ShowButton' onClick={handleShowMore}>{showMoreActive ? 'Show Less' : 'More Stories...'}</button>
+                {/* <button className='ShowButton' onClick={handleShowMore}>{showMoreActive ? 'Show Less' : 'More Stories...'}</button> */}
             </>
         )
     }

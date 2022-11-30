@@ -9,8 +9,9 @@ const NewsList: React.FC<Props> = ({ news, index }) => {
     const [showStories, setShowStories] = useState<boolean>(false)
 
     return (
+        // ! Right here in .slice(), change news.length to index if you want button back
         <>
-            {news.slice(0, index).map((newsItem, idx) => {
+            {news.slice(0, news.length).map((newsItem, idx) => {
                 const regex = /(<([^>]+)>)/ig;
                 const title = newsItem.description.replace(regex, '');
                 const description = newsItem.description.replace(regex, '');
@@ -28,13 +29,13 @@ const NewsList: React.FC<Props> = ({ news, index }) => {
     function renderStories(title: string, description: string) {
         return (
             <>
-                <div className="NewsCard">
+                <div className="NewsCard" onClick={() => setShowStories(!showStories)}>
 
                     <div className='NewsTitle'>
                         {title.length >= 100 ? title.slice(0, 100) + '...' : title}
                     </div>
-                    <p>
-                        {showStories ? description.slice(0, 500) : description.slice(0, 100)}<button className='SeeMoreButton' onClick={() => setShowStories(!showStories)}>{showStories ? '... See Less' : '...See More'}</button>
+                    <p className='NewsDesc'>
+                        {showStories ? description.slice(0, 500) : description.slice(0, 100)}<button className='SeeMoreButton'>{showStories ? '... See Less' : '...See More'}</button>
                     </p>
                 </div>
             </>

@@ -1,17 +1,15 @@
 .Link {
-    margin: 0rem 0rem;
     justify-content: center;
     align-items: center;
     overflow: scroll;
-    padding: 1rem;
+    padding: 0.5rem .5rem;
     color: black;
     transition: .2s all ease-in-out;
     cursor: pointer;
     flex: 1;
-    font-size: .65rem;
+    font-size: .75rem;
     font-style: italic;
     overflow: hidden;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .25) inset;
     border-radius: 10px;
 }
 
