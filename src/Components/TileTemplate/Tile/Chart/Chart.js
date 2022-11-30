@@ -69,35 +69,35 @@ export default function ShowChart({ dateValue, setDateValue }) {
     // * Adjustable
     let radius
     let lineWidth
-    let color = 'rgba(25, 30, 24, 0.2)'
+    // let color = 'rgba(25, 30, 24, 0.2)'
     if (dateValue <= 1) {
         radius = 12
         lineWidth = 4
-        color = 'rgba(25, 30, 24, 0.05)'
+        // color = 'rgba(25, 30, 24, 0.05)'
     } else if (dateValue <= 5) {
         radius = 9
-        lineWidth = 2.5
-        color = 'rgba(25, 30, 24, 0.075)'
+        lineWidth = 3
+        // color = 'rgba(25, 30, 24, 0.075)'
     } else if (dateValue <= 30) {
         radius = 4
-        lineWidth = 1.5
-        color = 'rgba(25, 30, 24, 0.1)'
+        lineWidth = 2
+        // color = 'rgba(25, 30, 24, 0.1)'
     } else if (dateValue <= 90) {
         radius = 2
         lineWidth = 1
-        color = 'rgba(25, 30, 24, 0.125)'
+        // color = 'rgba(25, 30, 24, 0.125)'
     } else if (dateValue <= 180) {
         radius = 1
         lineWidth = .75
-        color = 'rgba(25, 30, 24, 0.15)'
+        // color = 'rgba(25, 30, 24, 0.15)'
     } else if (dateValue <= 365) {
         radius = .5
         lineWidth = .5
-        color = 'rgba(25, 30, 24, 0.175)'
+        // color = 'rgba(25, 30, 24, 0.175)'
     } else if (dateValue <= 1500) {
         radius = .1
         lineWidth = .25
-        color = 'rgba(25, 30, 24, 0.2)'
+        // color = 'rgba(25, 30, 24, 0.2)'
     }
 
     // * On Load
@@ -112,18 +112,19 @@ export default function ShowChart({ dateValue, setDateValue }) {
                 label: '',
                 data: oilValue,
                 backgroundColor: [
-                    color,
-                    'rgba(255, 99, 132, 0.5)',
-                    'rgba(54, 162, 235, 0.5)',
-                    'rgba(255, 206, 86, 0.5)',
-                    'rgba(75, 192, 192, 0.5)',
-                    'rgba(153, 102, 255, 0.5)',
-                    'rgba(255, 255, , 0.2)'
+                    // color,
+                    'rgba(255, 255, 255, .0)',
+                    // 'rgba(255, 99, 132, 0.5)',
+                    // 'rgba(54, 162, 235, 0.5)',
+                    // 'rgba(255, 206, 86, 0.5)',
+                    // 'rgba(75, 192, 192, 0.5)',
+                    // 'rgba(153, 102, 255, 0.5)',
+                    // 'rgba(255, 255, , 0.2)'
                 ],
                 lineTension: .25,
                 borderColor: [
-                    'rgba(255, 255, 255, 1)',
-                    'rgba(255, 255, 255, 1)',
+                    'rgba(197, 158, 62, .7)',
+                    'rgba(217, 186, 102, 0.66)',
                 ],
                 borderWidth: lineWidth,
                 fontStyle: "bold",

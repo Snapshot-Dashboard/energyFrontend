@@ -30,12 +30,11 @@ const NewsList: React.FC<Props> = ({ news, index }) => {
         return (
             <>
                 <div className="NewsCard" onClick={() => setShowStories(!showStories)}>
-
                     <div className='NewsTitle'>
                         {title.length >= 100 ? title.slice(0, 100) + '...' : title}
                     </div>
                     <p className='NewsDesc'>
-                        {showStories ? description.slice(0, 500) : description.slice(0, 100)}<button className='SeeMoreButton'>{showStories ? '... See Less' : '...See More'}</button>
+                        {showStories ? description.slice(0, 1000) : description.slice(0, 100)}<button className='SeeMoreButton'>{showStories ? '... See Less' : '...See More'}</button>
                     </p>
                 </div>
             </>
