@@ -88,15 +88,15 @@ export default function ShowChart({ dateValue, setDateValue }) {
         // color = 'rgba(25, 30, 24, 0.125)'
     } else if (dateValue <= 180) {
         radius = 1
-        lineWidth = 1
+        lineWidth = 1.5
         // color = 'rgba(25, 30, 24, 0.15)'
     } else if (dateValue <= 365) {
-        radius = .5
-        lineWidth = .75
+        radius = .75
+        lineWidth = 1
         // color = 'rgba(25, 30, 24, 0.175)'
     } else if (dateValue <= 1500) {
-        radius = .1
-        lineWidth = .5
+        radius = .5
+        lineWidth = .75
         // color = 'rgba(25, 30, 24, 0.2)'
     }
 
