@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-dupe-keys */
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { Chart as Chartjs } from 'chart.js/auto' // ! KEEP
 import { Line } from 'react-chartjs-2'
 import axios from 'axios'
@@ -101,7 +101,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
     }
 
     // * On Load
-    useEffect(() => {
+    useLayoutEffect(() => {
         GetChartData()
     }, [tileActive])
 

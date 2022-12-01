@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from 'react'
 import ShowChart from './Chart/Chart.js'
-import Image from '../../../Assets/images/Enverus.png';
+import Image from '../../../Assets/images/image.jpg';
 import Toggle from '../Column/Toggle'
 import './Tile.css'
 import { setValue, setChartTitle, selectValue } from '../../../Redux/Slices/TileSlice'
