@@ -8,6 +8,8 @@ interface Props {
 }
 
 // TODO Build News Component That is reuseable
+// ! Render news from one Redux store source
+// ! There's too many re renders of apis slowing performance
 
 const NewsColumns: React.FC<Props> = ({ news, setNews }) => {
     return (
