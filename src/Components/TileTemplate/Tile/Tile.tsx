@@ -40,14 +40,13 @@ const Tile: React.FC<Props> = ({ dateValue, setDateValue, content, hasToggle, ha
     return (
         <div className={hasToggle === 'No' ? 'Tile' : hasToggle === 'Yes' && count !== tileId ? 'Tile2' : 'HasToggleTile'} onClick={() => handleTile(tileId)} >
             <div className='TileCard'>
-                {hasToggle === 'Yes' ? <Toggle tileId={tileId} count={count} toggled={toggled} outerWidth={0} size={25} /> : null}
-
-                <div className="DataDiv">
-                    {data === '' ? '' : `Units: ${data}`}
-                </div>
 
                 <div className={content === '' ? '' : "TitleDiv"}>
-                    {content}
+                    {content} {hasToggle === 'Yes' ? <Toggle tileId={tileId} count={count} toggled={toggled} outerWidth={0} size={15} /> : null}
+                </div>
+
+                <div className="DataDiv">
+                    {data === '' ? '' : `${data}`} {content === '' ? '' : content === 'Natural Gas Storage' ? 'billion cubic feet' : 'million barrels'}
                 </div>
 
                 {hasChart === 'Yes' ? <ShowChart dateValue={dateValue} setDateValue={setDateValue} /> : null}

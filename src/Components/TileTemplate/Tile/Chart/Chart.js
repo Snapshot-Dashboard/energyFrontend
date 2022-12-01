@@ -47,8 +47,8 @@ export default function ShowChart({ dateValue, setDateValue }) {
         }
         if (tileActive === 1) {
             await axios
-                .get(urlNaturalGas)
-                .then(res => console.log(res.data)) // ! Api is empty
+                .get(urlRegionalNaturalGas)
+                .then(res => setApiData(res.data.response.data)) // ! Api is empty
                 .catch(err => console.log(err))
             return
         }

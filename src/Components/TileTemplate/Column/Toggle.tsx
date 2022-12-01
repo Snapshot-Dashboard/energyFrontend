@@ -7,6 +7,7 @@ interface OuterContainer {
   toggled: boolean
   tileId: number
   outerWidth: number
+  size: number
 }
 
 interface Props {
@@ -20,7 +21,7 @@ interface Props {
 const ToggleOuterContainer = styled.div<OuterContainer>`
   position: relative;
   width: ${props => props.outerWidth + 'px'};
-  height: 25px;
+  height: ${props => props.size + 'px'};
   border-radius: 50px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
   background-color: ${props => props.count === props.tileId && props.toggled === true ? '#fcfcfc' : '#b6b6b64d'};
@@ -43,12 +44,12 @@ const ToggleInnerContainer = styled.div<Props>`
 `;
 
 const Slider: React.FC<Props> = ({ toggled, tileId, size }) => {
-  let outerWidth = 45
+  let outerWidth = 30
   const count = useSelector(selectValue)
 
   return (
     <div className="ToggleDiv">
-      <ToggleOuterContainer outerWidth={outerWidth} toggled={toggled} tileId={tileId} count={count} >
+      <ToggleOuterContainer outerWidth={outerWidth} size={size} toggled={toggled} tileId={tileId} count={count} >
         <ToggleInnerContainer outerWidth={outerWidth} size={size} toggled={toggled} tileId={tileId} count={count} />
       </ToggleOuterContainer>
     </div>

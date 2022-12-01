@@ -113,8 +113,18 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                     </> : numberOfTiles === 4 ?
                         <>
                             <Tile
+                                tileId={2}
+                                content={'U.S. Crude Oil Storage excluding SPR'}
+                                data={OilNoSPR}
+                                hasChart={hasChart}
+                                hasToggle={'Yes'}
+                                hasImage={'No'}
+                                hasFileTree={hasFileTree}
+                                dateValue={dateValue}
+                                setDateValue={setDateValue} />
+                            <Tile
                                 tileId={0}
-                                content={'SPR Storage'}
+                                content={'U.S. Crude Oil SPR Storage'}
                                 data={OilSPR}
                                 hasChart={hasChart}
                                 hasToggle={'Yes'}
@@ -122,20 +132,11 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                                 hasFileTree={hasFileTree}
                                 dateValue={dateValue}
                                 setDateValue={setDateValue} />
+
                             <Tile
                                 tileId={1}
-                                content={'Regional Natural Gas'}
+                                content={'Natural Gas Storage'}
                                 data={RegionalNaturalGasData}
-                                hasChart={hasChart}
-                                hasToggle={'Yes'}
-                                hasImage={'No'}
-                                hasFileTree={hasFileTree}
-                                dateValue={dateValue}
-                                setDateValue={setDateValue} />
-                            <Tile
-                                tileId={2}
-                                content={'Crude Oil Reported'}
-                                data={OilNoSPR}
                                 hasChart={hasChart}
                                 hasToggle={'Yes'}
                                 hasImage={'No'}
