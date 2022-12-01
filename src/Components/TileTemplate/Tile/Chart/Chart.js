@@ -61,7 +61,6 @@ export default function ShowChart({ dateValue, setDateValue }) {
         }
     }
 
-
     // * Data Points
     const oilDate = apiData.map(oil => (oil.period))
     const oilValue = apiData.map(oil => (oil.value))
@@ -106,7 +105,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
     }, [tileActive])
 
     const data = {
-        labels: oilDate?.slice(0, dateValue),
+        labels: oilDate?.slice(0, dateValue).reverse(),
         datasets: [
             {
                 label: 'Barrels',
