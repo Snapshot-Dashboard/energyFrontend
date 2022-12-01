@@ -36,6 +36,8 @@ const Tile: React.FC<Props> = ({ dateValue, setDateValue, content, hasToggle, ha
 
     }
 
+    const TechWebSite = 'https://www.enverus.com/'
+
     return (
         <div className={hasToggle === 'No' ? 'Tile' : hasToggle === 'Yes' && count !== tileId ? 'Tile2' : 'HasToggleTile'} onClick={() => handleTile(tileId)} >
             <div className='TileCard'>
@@ -49,7 +51,7 @@ const Tile: React.FC<Props> = ({ dateValue, setDateValue, content, hasToggle, ha
                 </div>
 
                 {hasChart === 'Yes' ? <ShowChart dateValue={dateValue} setDateValue={setDateValue} /> : null}
-                {hasImage === 'Yes' ? <a target='_' href='https://www.enverus.com/'><img className='EnverusImage' src={Image} /></a> : ''}
+                {hasImage === 'Yes' ? <a target='_' href={TechWebSite}><img className='EnverusImage' width={'100%'} height={'100%'} src={Image} alt='Enverus Logo' /></a> : ''}
                 {hasLink === 'Yes' ? <a href={''} className='Link' target={'_'}>Want a personalized dashboard?</a> : ''}
 
             </div>
