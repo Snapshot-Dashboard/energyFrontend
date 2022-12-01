@@ -1,6 +1,6 @@
 import './ComponentBar.css'
 import Buttons from './Components/Buttons/Buttons'
-import LinkComponent from './Components/Link/LinkComponent'
+import LinkComponent from '../TileTemplate/Tile/Link/LinkComponent'
 
 interface Props {
     dateValue: number

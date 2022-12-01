@@ -14,7 +14,8 @@ const ButtonComponent = styled.button`
 `;
 
 function Buttons({ dateValue, setDateValue }) {
-    const [buttons] = useState([1, 5, 30, 90, 180, 365, 1201])
+    // ! Roughly 5 data points equal 1 month
+    const [buttons] = useState([1, 5, 30, 90, 180, 365, 1201]) // TODO Need to align with data on chart
 
     const ButtonToggle = styled(ButtonComponent)`
     color: grey;

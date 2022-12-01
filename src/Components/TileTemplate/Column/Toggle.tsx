@@ -44,7 +44,7 @@ const ToggleInnerContainer = styled.div<Props>`
 `;
 
 const Slider: React.FC<Props> = ({ toggled, tileId, size }) => {
-  let outerWidth = 30
+  let outerWidth = 25
   const count = useSelector(selectValue)
 
   return (

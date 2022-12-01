@@ -7,6 +7,7 @@ import axios from 'axios'
 import './Chart.css'
 import { selectTitle, selectValue } from '../../../../Redux/Slices/TileSlice'
 import { useSelector } from 'react-redux';
+import Buttons from '../../../ComponentBar/Components/Buttons/Buttons'
 
 export default function ShowChart({ dateValue, setDateValue }) {
     const [apiData, setApiData] = useState([])
@@ -128,7 +129,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
                 borderWidth: lineWidth,
                 fontStyle: "bold",
                 fill: true,
-                data: oilValue?.slice(0, dateValue),
+                data: oilValue?.slice(0, dateValue), // ! Need to do buttons component
             }]
     }
 
@@ -178,6 +179,8 @@ export default function ShowChart({ dateValue, setDateValue }) {
                 className="ChartDiv"
                 data={data}
                 options={options} />
+            <Buttons dateValue={dateValue}
+                setDateValue={setDateValue} />
         </div>
     )
 }

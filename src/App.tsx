@@ -24,10 +24,6 @@ const App: React.FC = () => {
         dateValue={dateValue}
         setDateValue={setDateValue} />
 
-      <ComponentBar
-        dateValue={dateValue}
-        setDateValue={setDateValue} />
-
       <NewsColumns
         news={news}
         setNews={setNews} />

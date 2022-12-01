@@ -5,6 +5,7 @@
     flex-direction: column;
     font-size: 1.5rem;
     font-style: italic;
+    width: 500px;
 }
 
 .ChartDiv {
@@ -12,17 +13,28 @@
 }
 
 @media (min-width: 800px) {
+    .Chart {
+        width: 600px;
+        height: 200px;
+    }
+
     .ChartDiv {
         width: 600px;
+        height: 200px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
+    .Chart {
+        width: 675px;
+        height: 200px;
+    }
+
     .ChartDiv {
-        width: 700px;
+        width: 675px;
+        height: 200px;
     }
 }
-
 
 button {
     background: transparent;

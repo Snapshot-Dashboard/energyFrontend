@@ -109,7 +109,7 @@
 
 .EnverusImage {
     object-fit: cover;
-    width: 100%;
+    width: 75%;
 }
 
 .TileCard {
@@ -126,7 +126,7 @@
 }
 
 .TitleDiv {
-    margin: .5rem 0;
+    margin: .25rem 0;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -139,4 +139,11 @@
     font-weight: 300;
     font-style: italic;
     font-size: smaller;
+}
+
+@media (min-width: 1000px) {
+    .EnverusImage {
+        object-fit: cover;
+        width: 120px;
+    }
 }
