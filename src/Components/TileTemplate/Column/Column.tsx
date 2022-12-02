@@ -10,10 +10,9 @@ interface Props {
     numberOfTiles: number
     hasChart: string
     hasWideRow: string
-    hasFileTree: boolean
 }
 
-const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTiles, hasChart, hasWideRow, hasFileTree }) => {
+const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTiles, hasChart, hasWideRow }) => {
     const [RegionalNaturalGasData, setRegionalNaturalGasData] = useState<string>('')
     const [NaturalGasData, setNaturalGasData] = useState<string>('')
     const [OilNoSPR, setOilNoSPR] = useState<string>('')

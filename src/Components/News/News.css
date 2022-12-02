@@ -15,21 +15,14 @@
     /* Safari and Chrome */
 }
 
-.NewsHeading {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin: .5rem;
-}
-
 .NewsHead {
     width: 100%;
     font-weight: bold;
     color: rgb(30, 115, 189);
     justify-content: space-between;
     padding: .5rem 0;
-    border-top: 3px solid rgba(0, 0, 0, .1);
-    border-bottom: 3px solid rgba(0, 0, 0, .1);
+    border-top: 2px solid rgba(0, 0, 0, .1);
+    border-bottom: 2px solid rgba(0, 0, 0, .1);
 }
 
 .NewsTitle {
@@ -73,7 +66,6 @@
     cursor: pointer;
     background: rgba(255, 255, 255, .015);
     border-bottom: 1px solid rgba(0, 0, 0, .1);
-
 }
 
 .NewsCard:hover {
@@ -89,6 +81,7 @@
 
 .NewsDesc {
     width: 95%;
+    margin-top: -.25rem;
 }
 
 .NewsInfo {

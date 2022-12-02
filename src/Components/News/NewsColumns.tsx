@@ -8,7 +8,7 @@ import { useState } from 'react'
 // ! There's too many re renders of apis slowing performance
 
 const NewsColumns: React.FC = () => {
-    const [activeColumn, setActiveColumn] = useState<number>(4)
+    const [activeColumn, setActiveColumn] = useState<number>(0)
 
     const handleActiveColumn = (columnID: number) => {
         setActiveColumn(columnID)
