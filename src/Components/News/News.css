@@ -5,7 +5,6 @@
 
 .NewsColumn {
     overflow: scroll;
-    width: 100%;
     flex-direction: column;
     background: rgba(255, 255, 255, .015);
     height: 33vh;
@@ -79,7 +78,7 @@
 
 .NewsCard:hover {
     background-color: rgba(0, 0, 0, .05);
-    color: rgb(211, 211, 211);
+    color: rgb(77, 77, 77);
     box-shadow: 1px 1px 25px rgba(0, 0, 0, .125);
     text-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
 }
@@ -115,4 +114,23 @@
 
 .SeeMoreButton:hover {
     opacity: 1;
+}
+
+.NewsColActive {
+    flex: 5;
+}
+
+.NewsCol {
+    flex: 1;
+}
+
+.NewsLinkHead {
+    color: rgb(30, 115, 189);
+}
+
+.NewsLinkHeadWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }

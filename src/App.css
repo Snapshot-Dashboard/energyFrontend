@@ -39,6 +39,22 @@ a:hover {
   text-shadow: 1px 1px 12px rgba(0, 0, 0, 0)
 }
 
+a:active {
+  color: black;
+}
+
+strong {
+  color: black;
+  opacity: .5;
+  font-size: small;
+  font-style: italic;
+  transition: .2s all ease-in-out;
+}
+
+strong:hover {
+  color: var(--primary-color);
+}
+
 p {
   font-style: italic;
 }
