@@ -129,7 +129,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
                 borderWidth: lineWidth,
                 fontStyle: "bold",
                 fill: true,
-                data: oilValue?.slice(0, dateValue), // ! Need to do buttons component
+                data: oilValue?.slice(0, dateValue).reverse(), // ! Need to do buttons component
             }]
     }
 

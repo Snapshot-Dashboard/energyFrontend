@@ -8,6 +8,8 @@ interface Props {
 const NewsList: React.FC<Props> = ({ news, index }) => {
     const [showStories, setShowStories] = useState<boolean>(false)
 
+    console.log(news, index)
+
     return (
         // ! Right here in .slice(), change news.length to index if you want button back
         <>

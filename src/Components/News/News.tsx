@@ -12,7 +12,7 @@ interface Props {
 
 const News: React.FC<Props> = ({ news, setNews, newsTitle, apiURL }) => {
     const [showMoreActive, setShowMoreActive] = useState<boolean>(false)
-    const [index, setIndex] = useState<number>(3)
+    const [index, setIndex] = useState<number>(0)
 
     const handleShowMore = () => {
         if (!showMoreActive) {

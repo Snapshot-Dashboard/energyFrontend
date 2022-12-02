@@ -35,6 +35,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
 
     const urlNaturalGas =
         "https://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF"
+    // "https://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF"
 
     // ? Can I create a API component that is highly reuseable?
     // ? I should use that for the New Component as well
@@ -43,8 +44,8 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
 
         async function RegionalNaturalGasData() {
             await axios
-                .get(urlRegionalNaturalGas)
-                .then(res => setRegionalNaturalGasData(res.data.response.total))
+                .get(urlNaturalGas)
+                .then(res => setRegionalNaturalGasData(res.data.response.data[0].value))
                 .catch(err => console.log(err))
         }
         RegionalNaturalGasData()
@@ -52,7 +53,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
         async function getNaturalGasData() {
             await axios
                 .get(urlNaturalGas)
-                .then(res => setNaturalGasData(res.data.response.total))
+                .then(res => setNaturalGasData(res.data.response.data[0].value))
                 .catch(err => console.log(err))
         }
         getNaturalGasData()
@@ -60,7 +61,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
         async function getOilNoSPRData() {
             await axios
                 .get(urlOilNoSPR)
-                .then(res => setOilNoSPR(res.data.response.total))
+                .then(res => setOilNoSPR(res.data.response.data[0].value))
                 .catch(err => console.log(err))
         }
         getOilNoSPRData()
@@ -68,7 +69,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
         async function getOilData() {
             await axios
                 .get(urlOilSPR)
-                .then(res => setOilSPR(res.data.response.total))
+                .then(res => setOilSPR(res.data.response.data[0].value))
                 .catch(err => console.log(err))
         }
         getOilData()

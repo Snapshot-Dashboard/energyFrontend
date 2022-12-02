@@ -84,7 +84,7 @@ const Ticker: React.FC<Props> = () => {
     )
 
     function GetData() {
-        const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat8/feed/atom&count=10'
+        const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat2/feed/atom&count=10'
         Axios.get(apiUrl).then(res => setNews(res.data.items))
     }
 

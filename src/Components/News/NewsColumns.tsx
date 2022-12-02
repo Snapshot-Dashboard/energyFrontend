@@ -23,14 +23,14 @@ const NewsColumns: React.FC<Props> = ({ news, setNews }) => {
             <News
                 news={news}
                 setNews={setNews}
-                newsTitle={'E&P News'}
-                apiURL={'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat8/feed/atom&count=10'}
+                newsTitle={'E & P News'}
+                apiURL={'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat9/feed/atom&count=10'}
             />
             <News
                 news={news}
                 setNews={setNews}
                 newsTitle={'Finance News'}
-                apiURL={'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat8/feed/atom&count=10'}
+                apiURL={'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat10/feed/atom&count=10'}
             />
 
         </div>
