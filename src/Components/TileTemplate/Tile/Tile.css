@@ -76,7 +76,6 @@
     box-shadow: 1px 1px 15px rgba(0, 0, 0, .25);
     overflow: hidden;
     background: rgba(255, 255, 255, .015);
-    opacity: .75;
     border: 2px solid transparent;
 }
 

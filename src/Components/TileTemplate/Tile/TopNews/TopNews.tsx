@@ -17,11 +17,25 @@ function TopNews() {
                 {News.map((item, idx) => {
                     const regex = /(<([^>]+)>)/ig;
                     const title = item.title.replace(regex, '');
+                    const description = item.description.replace(regex, '');
                     return (
-                        <div className={Index === idx ? 'TopNewsCardSelected' : 'TopNewsCard'} onClick={() => setIndex(idx)}>
-                            <div>{title}</div>
-                            <div className={idx + 1 === News.length ? 'None' : 'TickerDash'}>-</div>
-                        </div>
+                        <>
+                            <div className={Index === idx ? 'TopNewsCardSelected' : 'TopNewsCard'} onClick={() => setIndex(idx)}>
+                                <div>{title}</div>
+                                <div className={idx + 1 === News.length ? 'None' : 'TickerDash'}>-</div>
+                            </div>
+                            {Index === idx ? (
+                                <div className='TopNewsModal' onClick={() => setIndex(-1)}>
+                                    <div className='ModalExit'>
+                                        X
+                                    </div>
+                                    <div className='ModalInfo'>
+                                        <h1>{title}</h1>
+                                        <p>{description}</p>
+                                    </div>
+                                </div>
+                            ) : null}
+                        </>
                     )
                 })}
             </div>
