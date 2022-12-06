@@ -7,7 +7,7 @@ import axios from 'axios'
 import './Chart.css'
 import { selectTitle, selectValue } from '../../../../Redux/Slices/TileSlice'
 import { useSelector } from 'react-redux';
-import Buttons from '../../../ComponentBar/Components/Buttons/Buttons'
+import Buttons from '../Buttons/Buttons'
 
 export default function ShowChart({ dateValue, setDateValue }) {
     const [apiData, setApiData] = useState([])
@@ -62,43 +62,53 @@ export default function ShowChart({ dateValue, setDateValue }) {
         }
     }
 
-    // * Data Points
-    const oilDate = apiData.map(oil => (oil.period))
-    const oilValue = apiData.map(oil => (oil.value))
-
-    // * Adjustable
+    // * Adjustable 
+    // TODO Streamline Component, a lot of DRY
     let radius
     let lineWidth
-    // let color = 'rgba(25, 30, 24, 0.2)'
+    let sliceIdxStart
+    let sliceIdxEnd
     if (dateValue <= 1) {
         radius = 12
         lineWidth = 5
-        // color = 'rgba(25, 30, 24, 0.05)'
+        sliceIdxStart = 0
+        sliceIdxEnd = 10
     } else if (dateValue <= 5) {
         radius = 9
         lineWidth = 4
-        // color = 'rgba(25, 30, 24, 0.075)'
+        sliceIdxStart = 0
+        sliceIdxEnd = 10
     } else if (dateValue <= 30) {
         radius = 4
         lineWidth = 3
-        // color = 'rgba(25, 30, 24, 0.1)'
+        sliceIdxStart = 2
+        sliceIdxEnd = 7
     } else if (dateValue <= 90) {
         radius = 2
         lineWidth = 2
-        // color = 'rgba(25, 30, 24, 0.125)'
+        sliceIdxStart = 2
+        sliceIdxEnd = 7
     } else if (dateValue <= 180) {
         radius = 1
         lineWidth = 1.5
-        // color = 'rgba(25, 30, 24, 0.15)'
+        sliceIdxStart = 2
+        sliceIdxEnd = 4
     } else if (dateValue <= 365) {
         radius = .75
         lineWidth = 1
-        // color = 'rgba(25, 30, 24, 0.175)'
+        sliceIdxStart = 2
+        sliceIdxEnd = 4
     } else if (dateValue <= 1500) {
         radius = .5
         lineWidth = .75
-        // color = 'rgba(25, 30, 24, 0.2)'
+        sliceIdxStart = 2
+        sliceIdxEnd = 4
     }
+
+    // * Data Points
+    const oilDateValue = apiData.map(oil => (oil.period))
+    const oilDate = oilDateValue.map(date => date.slice(sliceIdxStart, sliceIdxEnd))
+    const oilValue = apiData.map(oil => (oil.value))
 
     // * On Load
     useLayoutEffect(() => {
@@ -172,15 +182,12 @@ export default function ShowChart({ dateValue, setDateValue }) {
 
     return (
         <div className="Chart">
-            <div className="TitleDiv">
-                {chartTitle}
-            </div>
+            <div className="TitleDiv">{chartTitle}</div>
             <Line
                 className="ChartDiv"
                 data={data}
                 options={options} />
-            <Buttons dateValue={dateValue}
-                setDateValue={setDateValue} />
+            <Buttons dateValue={dateValue} setDateValue={setDateValue} />
         </div>
     )
 }

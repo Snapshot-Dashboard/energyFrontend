@@ -4,7 +4,6 @@ import Nav from './Components/Nav/Nav';
 import Ticker from './Components/Ticker/Ticker';
 import TileTemplate from './Components/TileTemplate/TileTemplate';
 import NewsColumns from './Components/News/NewsColumns';
-import ComponentBar from './Components/ComponentBar/ComponentBar';
 
 const App: React.FC = () => {
   // const [news, setNews] = useState<any[]>([])
@@ -24,8 +23,7 @@ const App: React.FC = () => {
         dateValue={dateValue}
         setDateValue={setDateValue} />
 
-      <NewsColumns
-      />
+      <NewsColumns />
 
     </div>
   );

@@ -1,5 +1,5 @@
 import './ComponentBar.css'
-import Buttons from './Components/Buttons/Buttons'
+import Buttons from '../TileTemplate/Tile/Buttons/Buttons'
 import LinkComponent from '../TileTemplate/Tile/Link/LinkComponent'
 
 interface Props {

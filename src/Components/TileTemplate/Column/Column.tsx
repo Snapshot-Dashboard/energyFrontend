@@ -38,6 +38,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
 
     // ? Can I create a API component that is highly reuseable?
     // ? I should use that for the New Component as well
+    // ? A lot of DRY happening that could be refined
 
     useEffect(() => {
 
@@ -87,18 +88,20 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                     hasToggle={'No'}
                     hasImage={'No'}
                     hasLink={'No'}
+                    hasTopNews={'Yes'}
                     dateValue={dateValue}
                     setDateValue={setDateValue} />
                 : numberOfTiles === 2 ?
                     <>
                         <Tile
                             tileId={3}
-                            content={'Regional Natural Gas'}
+                            content={''}
                             data={RegionalNaturalGasData}
                             hasChart={hasChart}
-                            hasToggle={'Yes'}
+                            hasToggle={'No'}
                             hasImage={'No'}
                             hasLink={'No'}
+                            hasTopNews={'No'}
                             dateValue={dateValue}
                             setDateValue={setDateValue} />
                         <Tile
@@ -109,6 +112,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                             hasToggle={'No'}
                             hasImage={'No'}
                             hasLink={'No'}
+                            hasTopNews={'No'}
                             dateValue={dateValue}
                             setDateValue={setDateValue} />
                     </> : numberOfTiles === 5 ?
@@ -121,6 +125,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                                 hasToggle={'Yes'}
                                 hasImage={'No'}
                                 hasLink={'No'}
+                                hasTopNews={'No'}
                                 dateValue={dateValue}
                                 setDateValue={setDateValue} />
                             <Tile
@@ -131,6 +136,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                                 hasToggle={'Yes'}
                                 hasImage={'No'}
                                 hasLink={'No'}
+                                hasTopNews={'No'}
                                 dateValue={dateValue}
                                 setDateValue={setDateValue} />
 
@@ -142,6 +148,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                                 hasToggle={'Yes'}
                                 hasImage={'No'}
                                 hasLink={'No'}
+                                hasTopNews={'No'}
                                 dateValue={dateValue}
                                 setDateValue={setDateValue} />
                             <Tile
@@ -152,6 +159,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                                 hasToggle={'No'}
                                 hasImage={'Yes'}
                                 hasLink={'No'}
+                                hasTopNews={'No'}
                                 dateValue={dateValue}
                                 setDateValue={setDateValue} />
                             <Tile
@@ -162,6 +170,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                                 hasToggle={'No'}
                                 hasImage={'No'}
                                 hasLink={'Yes'}
+                                hasTopNews={'No'}
                                 dateValue={dateValue}
                                 setDateValue={setDateValue} />
                         </> : null}

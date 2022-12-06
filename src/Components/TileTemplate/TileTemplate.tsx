@@ -26,13 +26,13 @@ const TileTemplate: React.FC<Props> = ({ dateValue, setDateValue }) => {
                 dateValue={dateValue}
                 setDateValue={setDateValue} />
 
-            {/* <Column
+            <Column
                 content={''}
                 numberOfTiles={1}
                 hasChart={'No'}
                 hasWideRow={'No'}
                 dateValue={dateValue}
-                setDateValue={setDateValue} /> */}
+                setDateValue={setDateValue} />
 
         </div>
     )

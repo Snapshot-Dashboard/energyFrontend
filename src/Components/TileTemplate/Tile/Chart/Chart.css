@@ -10,6 +10,8 @@
 
 .ChartDiv {
     width: 500px;
+    padding: .5rem;
+    border-radius: 10px;
 }
 
 @media (min-width: 800px) {

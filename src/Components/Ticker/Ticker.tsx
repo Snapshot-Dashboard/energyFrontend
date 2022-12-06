@@ -1,5 +1,5 @@
 import './Ticker.css'
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import Axios from 'axios'
 interface Props {
 
@@ -8,55 +8,7 @@ interface Props {
 const Ticker: React.FC<Props> = () => {
     const [News, setNews] = useState<any[]>([])
 
-    // const mod = (n: number, m: number) => {
-    //     let result = n % m
-
-    //     return result >= 0 ? result : result + m
-    // }
-
-    // const scrollLeft = () => {
-    //     if (index === 0) {
-    //         setIndex(2)
-    //         return
-    //     }
-    //     setIndex(index => index - 1)
-    // }
-
-    // const scrollRight = () => {
-    //     if (index === 2) {
-    //         setIndex(0)
-    //         return
-    //     }
-    //     setIndex(index => index + 1)
-    // }
-
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         if (index === 2) {
-    //             setIndex(0)
-    //             return
-    //         }
-    //         setIndex(index => index + 1)
-    //     }, 5000)
-    //     return () => {
-    //         clearInterval(interval)
-    //     }
-    // }, [index])
-
-    // const leftIndex = mod(index - 1, cards.length)
-    // const rightIndex = mod(index + 1, cards.length)
-
-    // let className = ""
-    // if (i === index) {
-    //     className = styles.Carousel
-    // } else if (i === leftIndex) {
-    //     className = styles.CarouselLeft
-    // } else if (i === rightIndex) {
-    //     className = styles.CarouselRight
-    // }
-
-
-    useEffect(() => {
+    useLayoutEffect(() => {
         GetData()
     }, [])
 

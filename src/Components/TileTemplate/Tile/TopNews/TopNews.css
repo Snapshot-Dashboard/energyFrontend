@@ -1,0 +1,36 @@
+.TopNews {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: scroll;
+    padding: .5rem 0;
+}
+
+.TopNewsCard {
+    padding: .25rem .5rem;
+    transition: .2s all ease-in-out;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.TopNewsCard:hover {
+    background-color: rgba(0, 0, 0, .05);
+    color: rgb(77, 77, 77);
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, .125);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+}
+
+.TopNewsCard:active {
+    color: black;
+    transform: scale(.9);
+}
+
+.TopNewsCardSelected {
+    padding: .25rem .5rem;
+    transition: .2s all ease-in-out;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .2);
+    color: black;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, .125);
+}
