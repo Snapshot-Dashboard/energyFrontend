@@ -34,7 +34,6 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
 
     const urlNaturalGas =
         "https://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF"
-    // "https://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF"
 
     // ? Can I create a API component that is highly reuseable?
     // ? I should use that for the New Component as well

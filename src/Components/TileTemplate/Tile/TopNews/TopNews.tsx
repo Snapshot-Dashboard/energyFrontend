@@ -12,39 +12,30 @@ function TopNews() {
 
     return (
         <>
-            <h3>Top News</h3>
+            <a href='https://energynewsbeat.co/top-news/' target='_' className='TopNewsHead'>Top News</a>
             <div className="TopNews">
                 {News.map((item, idx) => {
+
                     const regex = /(<([^>]+)>)/ig;
-                    const title = item.title.replace(regex, '');
-                    const description = item.description.replace(regex, '');
+                    const title = item.title.replace(regex, '')
+                    const titleLink = title.toLowerCase().replaceAll("[^a-zA-Z0-9]", " ")
+
                     return (
                         <>
-                            <div className={Index === idx ? 'TopNewsCardSelected' : 'TopNewsCard'} onClick={() => setIndex(idx)}>
-                                <div>{title}</div>
-                                <div className={idx + 1 === News.length ? 'None' : 'TickerDash'}>-</div>
-                            </div>
-                            {Index === idx ? (
-                                <div className='TopNewsModal' onClick={() => setIndex(-1)}>
-                                    <div className='ModalExit'>
-                                        X
-                                    </div>
-                                    <div className='ModalInfo'>
-                                        <h1>{title}</h1>
-                                        <p>{description}</p>
-                                    </div>
-                                </div>
-                            ) : null}
+                            <a href={`https://energynewsbeat.co/${titleLink.replace(/[\W_]+/g, "-")}/`} target='_' className={Index === idx ? 'TopNewsCardSelected' : 'TopNewsCard'} onClick={() => setIndex(idx)}>
+                                {title}
+                            </a>
                         </>
                     )
                 })}
+
             </div>
         </>
     )
 
     function GetData() {
         const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat2/feed/atom&count=10'
-        Axios.get(apiUrl).then(res => setNews(res.data.items))
+        Axios.get(apiUrl).then(res => setNews(res.data.items)).catch(err => console.log(err))
     }
 
 }

@@ -14,8 +14,10 @@ const NewsColumns: React.FC = () => {
         setActiveColumn(columnID)
     }
 
+    // ! There are 10 stories in these APIs
     return (
         <div className="NewsColumns">
+
             <News
                 newsTitle={'US Energy'}
                 apiURL='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Ffollow.it%2Fhome-energy-news-beat8/feed/atom&count=10'

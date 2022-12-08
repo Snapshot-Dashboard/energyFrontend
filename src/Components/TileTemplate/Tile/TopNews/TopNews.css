@@ -3,7 +3,15 @@
     justify-content: flex-start;
     flex-direction: column;
     overflow: scroll;
-    padding: .5rem 0;
+}
+
+.TopNewsHead {
+    color: rgb(30, 115, 189);
+    width: 100%;
+    transition: .2s all ease-in-out;
+    font-weight: bold;
+    margin: .5rem 0;
+    font-size: 1rem;
 }
 
 .TopNewsCard {
@@ -11,6 +19,9 @@
     transition: .2s all ease-in-out;
     font-weight: 500;
     border-radius: 10px;
+    font-weight: bold;
+    margin: .25rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
 }
 
 .TopNewsCard:hover {
@@ -34,38 +45,4 @@
     background-color: rgba(0, 0, 0, .2);
     color: black;
     box-shadow: 1px 1px 25px rgba(0, 0, 0, .125);
-}
-
-.TopNewsModal {
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
-    max-height: 80vh;
-    width: 80%;
-    background-color: white;
-    box-shadow: 1px 1px 10px 1000px rgba(0, 0, 0, .5);
-    position: absolute;
-    top: 15%;
-    right: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    z-index: 9;
-    overflow: scroll;
-}
-
-.ModalInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 90%;
-    margin: .5rem 0;
-}
-
-.ModalExit {
-    position: absolute;
-    right: 2.5%;
-    top: 2.5%;
-    font-size: large;
-    opacity: .25;
-    font-weight: bold;
 }

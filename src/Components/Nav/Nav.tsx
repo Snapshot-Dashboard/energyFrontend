@@ -1,6 +1,6 @@
 import './Nav.css'
 import { AiOutlineMenu } from 'react-icons/ai';
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 interface Props {
     isActive: boolean
@@ -38,7 +38,7 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
             <>
                 <div className="Title">
                     Oil & Gas Snapshot
-                    <div className="SubTitle">Powered by Snapshot Dashboard</div>
+                    <div className="SubTitle">Powered by Energy News Beat</div>
                 </div>
             </>
         )
@@ -59,6 +59,7 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
             <>
                 <div className={isActive ? "Menu MenuActive" : 'Menu'}>
                     <Link to='/'>Support</Link>
+                    <Link to='/'>Contact Us</Link>
                 </div>
             </>
         )
