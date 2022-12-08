@@ -41,7 +41,8 @@
 .TopNewsCardSelected {
     padding: .25rem .5rem;
     transition: .2s all ease-in-out;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 1rem;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, .2);
     color: black;
