@@ -1,4 +1,4 @@
-# Energy News Beat Dashboard
+# Energy News Beat Dashboard - Development
 
 This dashboard is desgined to synthesize fragmented oil and gas data into one central repository for easier and more pointed analysis. This project is sponsored by EnergyNewsBeat.com - the worlds great website.
 
