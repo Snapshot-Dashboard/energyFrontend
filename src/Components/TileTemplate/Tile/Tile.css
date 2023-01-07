@@ -163,9 +163,10 @@
 }
 
 .TitleDiv {
-    margin: .25rem 0;
-    font-weight: 700;
+    margin: .05rem 0;
+    font-weight: 500;
     display: flex;
+    font-size: large;
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -173,14 +174,18 @@
 }
 
 .DataDiv {
-    font-weight: 300;
+    font-weight: 650;
     font-style: italic;
-    font-size: smaller;
+    font-size: large;
+    padding-bottom: 10px;
 }
 
 @media (min-width: 1000px) {
     .EnverusImage {
         object-fit: cover;
-        width: 120px;
+        width: 210px;
+        padding-top: auto;
+        padding-bottom: auto
+        ;
     }
 }

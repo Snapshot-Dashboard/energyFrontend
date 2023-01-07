@@ -21,7 +21,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
     // TODO Refactor a lot of this code and streamline for useability
 
     // Regional Natural Gas
-    const urlRegionalNaturalGas =
+    const urlRefinieyCapacity =
         "https://api.eia.gov/v2/petroleum/pnp/wiup/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=WPULEUS3"
 
     // EIA
@@ -43,7 +43,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
 
         async function RegionalNaturalGasData() {
             await axios
-                .get(urlNaturalGas)
+                .get(urlRefinieyCapacity)
                 .then(res => setRegionalNaturalGasData(res.data.response.data[0].value))
                 .catch(err => console.log(err))
         }
@@ -141,7 +141,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
 
                             <Tile
                                 tileId={1}
-                                content={'Natural Gas Storage'}
+                                content={'Refinary Utilization'}
                                 data={RegionalNaturalGasData}
                                 hasChart={hasChart}
                                 hasToggle={'Yes'}
