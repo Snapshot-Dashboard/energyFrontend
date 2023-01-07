@@ -18,11 +18,11 @@ function TopNews() {
 
                     const regex = /(<([^>]+)>)/ig;
                     const title = item.title.replace(regex, '')
-                    const titleLink = title.toLowerCase().replaceAll("[^a-zA-Z0-9]", " ")
+                    const titleLinkTest = item.link
 
                     return (
                         <>
-                            <a href={`https://energynewsbeat.co/${titleLink.replace(/[\W_]+/g, "-")}/`} target='_' className={Index === idx ? 'TopNewsCardSelected' : 'TopNewsCard'} onClick={() => setIndex(idx)}>
+                            <a href={titleLinkTest} target='_' className={Index === idx ? 'TopNewsCardSelected' : 'TopNewsCard'} onClick={() => setIndex(idx)}>
                                 {title}
                             </a>
                         </>

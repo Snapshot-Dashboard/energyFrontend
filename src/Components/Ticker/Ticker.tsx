@@ -20,10 +20,12 @@ const Ticker: React.FC<Props> = () => {
                         {News.map((item, idx) => {
                             const regex = /(<([^>]+)>)/ig;
                             const title = item.title.replace(regex, '');
+                            const titleLink = title.toLowerCase().replaceAll("[^a-zA-Z0-9]", " ");
                             return (
                                 <>
+                                    <a href={`https://energynewsbeat.co/${titleLink.replace(/[\W_]+/g, "-")}/`} />
                                     <div className='TickerItem'>{title}</div>
-                                    <div className={idx + 1 === News.length ? 'None' : 'TickerDash'}>-</div>
+                                    <div className={idx + 1 === News.length ? 'None' : 'TickerDash'}>--</div>
                                 </>
                             )
                         }
