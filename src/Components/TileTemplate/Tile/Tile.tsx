@@ -53,7 +53,7 @@ const Tile: React.FC<Props> = ({ dateValue, setDateValue, content, hasToggle, ha
             {hasChart === 'No' && hasTopNews === 'Yes' ? <ShowTopNews /> : null}
             {hasChart === 'Yes' ? <ShowChart dateValue={dateValue} setDateValue={setDateValue} /> : null}
             {hasImage === 'Yes' ? <a target='_' href={TechWebSite}><img className='EnverusImage' width={'100%'} height={'100%'} src={Image} alt='Enverus Logo' /></a> : ''}
-            {hasLink === 'Yes' ? <a href={''} className='Link' target={'_'}>Michael Tanner is a genius</a> : ''}
+            {hasLink === 'Yes' ? <a href={''} className='Link' target={'_'}>Want a personalized dashboard?</a> : ''}
 
         </div >
 
