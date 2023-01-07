@@ -37,7 +37,7 @@ const Nav: React.FC<Props> = ({ isActive, setIsActive }) => {
         return (
             <>
                 <div className="Title">
-                    Oil & Gas Dashboard - Development
+                    Oil & Gas Dashboard
                     <div className="SubTitle">Powered by Energy News Beat</div>
                 </div>
             </>

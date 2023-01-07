@@ -28,7 +28,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
 
   // Natural Gas
   const urlNaturalGas =
-    "hhttps://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF";
+    "https://api.eia.gov/v2/natural-gas/stor/wkly/data?api_key=f8127de985a95b35a603961cfd50cdbd&data[]=value&facets[duoarea][]=NUS&sort[0][column]=period&sort[0][direction]=desc&facets[series][]=NW2_EPG0_SWO_R48_BCF";
 
   // ? Refactor If Possible, a lot of DRY
   async function GetChartData() {
