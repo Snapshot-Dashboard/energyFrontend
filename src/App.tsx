@@ -11,16 +11,13 @@ const App: React.FC = () => {
 
   ReactGA.initialize("G-30644SKVVK");
 
-
-
   // const [news, setNews] = useState<any[]>([])
   const [isActive, setIsActive] = useState<boolean>(false)
   const [dateValue, setDateValue] = useState<number>(90)
 
-    useEffect(() => {
-      ReactGA.pageview(window.location.pathname + window.location.search);
-    }, []);
-
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <div className="App">
