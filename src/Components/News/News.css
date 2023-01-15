@@ -17,7 +17,8 @@
 
 .NewsHead {
     width: 100%;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: medium;
     color: rgb(30, 115, 189);
     justify-content: space-between;
     padding: .5rem 0;

@@ -6,10 +6,10 @@
     flex: 1;
     border-radius: 10px;
     overflow: hidden;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     flex-direction: row;
     margin: 0 .5rem;
 }
@@ -38,7 +38,13 @@
 @media (max-width: 800px) {
     .Buttons {
         overflow: scroll;
-        justify-content: start;
+        justify-content: left;
     }
 
+}
+
+align {
+    justify-content: right;
+    align-items: right;
+    align-content: flex-end;
 }

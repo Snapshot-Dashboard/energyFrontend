@@ -166,7 +166,7 @@
     margin: .05rem 0;
     font-weight: 500;
     display: flex;
-    font-size: large;
+    font-size: medium;
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -174,7 +174,7 @@
 }
 
 .DataDiv {
-    font-weight: 650;
+    font-weight: 550;
     font-style: italic;
     font-size: large;
     padding-bottom: 10px;
