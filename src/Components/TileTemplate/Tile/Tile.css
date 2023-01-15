@@ -166,18 +166,19 @@
     margin: .05rem 0;
     font-weight: 500;
     display: flex;
-    font-size: .8vw;
+    font-size: .75vw;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100%;
+    padding-top: 5px;
 }
 
 .DataDiv {
     font-weight: 550;
     font-style: italic;
     font-size: large;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
 }
 
 @media (min-width: 1000px) {
