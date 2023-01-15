@@ -165,7 +165,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
     scales: {
       y: {
         title: {
-          display: true,
+          display: false,
           text: eiaUnits.slice(0, 1),
         },
         grid: {
@@ -191,7 +191,11 @@ export default function ShowChart({ dateValue, setDateValue }) {
     <div className="Chart">
       <div className="TitleDiv">{chartTitle}</div>
       <Line className="ChartDiv" data={data} options={options} />
-      <Buttons dateValue={dateValue} setDateValue={setDateValue} />
+      <Buttons
+        className="Buttons"
+        dateValue={dateValue}
+        setDateValue={setDateValue}
+      />
     </div>
   );
 }

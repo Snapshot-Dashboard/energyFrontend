@@ -66,7 +66,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: scroll;
+    overflow: hidden;
     color: black;
     transition: .2s all ease-in-out;
     cursor: pointer;
@@ -166,26 +166,25 @@
     margin: .05rem 0;
     font-weight: 500;
     display: flex;
-    font-size: large;
+    font-size: .8vw;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100%;
+    padding-top: 5px;
 }
 
 .DataDiv {
-    font-weight: 650;
+    font-weight: 550;
     font-style: italic;
-    font-size: large;
-    padding-bottom: 10px;
+    font-size: medium;
+    padding-bottom: 25px;
 }
 
 @media (min-width: 1000px) {
     .EnverusImage {
-        object-fit: cover;
         width: 210px;
-        padding-top: auto;
-        padding-bottom: auto
-        ;
+        padding-bottom: 10px;
+        height: 100%;
     }
 }

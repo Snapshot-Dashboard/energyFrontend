@@ -6,12 +6,14 @@
     font-size: 1.5rem;
     font-style: italic;
     width: 750px;
+    padding-bottom: 25px;
 }
 
 .ChartDiv {
     width: 500px;
     padding: .5rem;
     border-radius: 10px;
+    height: 90%;
 }
 
 @media (min-width: 800px) {
@@ -41,7 +43,7 @@
 button {
     background: transparent;
     border: none;
-    color: white;
+    color: rgb(24, 2, 2);
     transition: .1s all ease-in-out;
     border-radius: 5px;
     cursor: pointer;
