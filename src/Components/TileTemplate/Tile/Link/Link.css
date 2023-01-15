@@ -1,14 +1,13 @@
 .Link {
     justify-content: center;
     align-items: center;
-    overflow: scroll;
     padding: 0.5rem .5rem;
-    color: black;
+    color: rgb(59, 168, 45);
     transition: .2s all ease-in-out;
     cursor: pointer;
     flex: 1;
     font-size: .75rem;
-    font-style: italic;
+    font-style: bold;
     overflow: hidden;
     border-radius: 10px;
 }

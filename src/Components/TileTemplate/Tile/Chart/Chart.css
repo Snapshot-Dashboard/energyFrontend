@@ -6,13 +6,14 @@
     font-size: 1.5rem;
     font-style: italic;
     width: 750px;
+    padding-bottom: 25px;
 }
 
 .ChartDiv {
     width: 500px;
     padding: .5rem;
     border-radius: 10px;
-    height: 100%;
+    height: 90%;
 }
 
 @media (min-width: 800px) {

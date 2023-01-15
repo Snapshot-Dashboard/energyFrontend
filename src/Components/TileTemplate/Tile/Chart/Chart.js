@@ -165,7 +165,7 @@ export default function ShowChart({ dateValue, setDateValue }) {
     scales: {
       y: {
         title: {
-          display: true,
+          display: false,
           text: eiaUnits.slice(0, 1),
         },
         grid: {
