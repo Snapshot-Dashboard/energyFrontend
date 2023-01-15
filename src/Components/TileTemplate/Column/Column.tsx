@@ -118,7 +118,7 @@ const Column: React.FC<Props> = ({ dateValue, setDateValue, content, numberOfTil
                         <>
                             <Tile
                                 tileId={2}
-                                content={'U.S. Crude Oil Storage excluding SPR'}
+                                content={'U.S. Crude Oil Storage excl. SPR'}
                                 data={OilNoSPR}
                                 hasChart={hasChart}
                                 hasToggle={'Yes'}
